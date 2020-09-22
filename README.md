@@ -6,6 +6,6 @@ We are building a mobile based and web based platform for detection the text in 
 
 We have also add Object Recognition feature
 
-Find code for Object Recognition [here](Object Detection/object_recognition.py)
+Find code for Object Recognition [here](https://github.com/ashish807/OCR-and-language-translation/tree/master/Object%20Detetion)
 
-![cat](Images/Object_detection)
+![cat](Images/Object_detection.PNG)
