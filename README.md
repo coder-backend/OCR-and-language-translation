@@ -1,8 +1,8 @@
 # OCR-and-language-translation
 
 # Currently working on it
-
-Please find Write Up of this project [here](https://drive.google.com/file/d/1VBUjPQWALCnrJDHQiuuFQBlQDU0gxmUj/view?usp=sharing) 
+Please find:
+[WriteUp](https://drive.google.com/file/d/1VBUjPQWALCnrJDHQiuuFQBlQDU0gxmUj/view?usp=sharing) 
 
 We are building a mobile based and web based platform for detection the text in the picture (OCR) and translating into user desired language.
 
