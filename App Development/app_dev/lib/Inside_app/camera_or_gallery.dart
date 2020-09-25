@@ -10,13 +10,13 @@ class Options extends StatefulWidget {
   }
 }
 
-var _alignment = Alignment.bottomCenter;
-nextpage(context) {
-  Navigator.push(
-      context, MaterialPageRoute(builder: (context) => TeamMember()));
-}
-
 class OptionsState extends State<Options> {
+  var _alignment = Alignment.bottomCenter;
+  nextpage(context) {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => TeamMember()));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -122,7 +122,8 @@ class OptionsState extends State<Options> {
             },
             icon: Icon(Icons.airplanemode_active),
             label: GestureDetector(
-                onTap: () => nextpage(context), child: Text("Team Member"))));
+                onLongPress: () => nextpage(context),
+                child: Text("Team Member"))));
   }
 
   selectFromGallery(context) {
