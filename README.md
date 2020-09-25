@@ -10,4 +10,8 @@ We have also add Object Recognition feature
 
 Find code for Object Recognition [here](https://github.com/ashish807/OCR-and-language-translation/tree/master/Object%20Detetion)
 
-![cat](Images/Object_detection.PNG)
+Our App login page
+![Login Page](Images/login_page.jpeg)
+
+The way it recognize object
+![Cat Detected](Images/cat_detected.jpeg)
