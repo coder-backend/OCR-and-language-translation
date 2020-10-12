@@ -4,11 +4,13 @@ A new Flutter project.
 
 ## This section is for android application of our project
 
+We are building this Android App so that peoples can use our project in day to day basis. 
+
 Till now, we have implemented object detection part and we are working on the OCR and language translation part. 
 
 For now you can run this app in android platform and enjoy detecting the 80 different objects.
 
-This app is user friendly, any one can easy use this app and get benefited.
+This app is very user friendly, anyone can easily use this app and get benefited.
 
 # This is the login page and for now you don't need to create any account just click login
 
@@ -18,10 +20,15 @@ This app is user friendly, any one can easy use this app and get benefited.
 
 ![home](https://github.com/ashish807/OCR-and-language-translation/blob/master/Images/app_home.jpeg)
 
-As you can see it is a very to easy figure out what to do next
+As you can see it is very easy figure out what to do next.
 
 # Click on camera button if you want to detect live object otherwise click gallery
 
 # Long press on Team Member button to know the contributors of this project
 
 ![Team](https://github.com/ashish807/OCR-and-language-translation/blob/master/Images/team.jpeg)
+
+
+# Contact
+
+ashish.adhikari727@gmail.com
