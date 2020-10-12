@@ -41,7 +41,7 @@ ashish.adhikari727@gmail.com
 
 bishwashpokhrel.be18cse@pec.edu.in
 
-anilmeena.be18cse@pec.edu.in
+anilk07105@gmail.com
 
-amitsingh.be18cse@pec.edu.in
+mahla.amit1077@gmail.com
 
