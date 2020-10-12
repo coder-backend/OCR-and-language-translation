@@ -12,7 +12,7 @@ This app is user friendly, any one can easy use this app and get benefited.
 
 # This is the login page and for now you don't need to create any account just click login
 
-!login](https://github.com/ashish807/OCR-and-language-translation/blob/master/Images/login_page.jpeg)
+![login](https://github.com/ashish807/OCR-and-language-translation/blob/master/Images/login_page.jpeg)
 
 # This is our home page
 
