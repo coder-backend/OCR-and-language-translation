@@ -10,6 +10,8 @@ Beside from OCR, we are implementing Object detection and then translating the t
 
 Find code for Object Recognition [here](https://github.com/ashish807/OCR-and-language-translation/tree/master/Object%20Detetion)
 
+For trained model used in App click [here](https://github.com/ashish807/OCR-and-language-translation/tree/master/App%20Development/app_dev/assets/tflite)
+
 # login page of our app: 
 
 ![LoginPage](Images/login_page.jpeg)
