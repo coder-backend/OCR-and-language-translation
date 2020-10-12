@@ -8,8 +8,10 @@ import os
 fh = open("test.txt", "r")
 myText = fh.read().replace("\n", " ")
 
-# Language we want to use 
-language = 'en'
+# Enter the language code you want to use
+lan =  input()
+language = lan 
+
 
 output = gTTS(text=myText, lang=language, slow=False)
 
