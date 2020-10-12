@@ -1,8 +1,9 @@
 # OCR-and-language-translation
 
 # Currently working on it
-Please find:
-[WriteUp](https://drive.google.com/file/d/1VBUjPQWALCnrJDHQiuuFQBlQDU0gxmUj/view?usp=sharing) 
+We have uploaded all the required documents of this project in [Documents](Documents/) folder. We have uploaded [Project Summary](Documents/Project Summary.pdf), [UML Class Diagram](Documents/Class_diagram.pdf) and many more in [Documents](Documents\) folder
+
+
 
 We are building a mobile based and web based platform for Optical Character Recognition (OCR) and translating into user desired language.
 
