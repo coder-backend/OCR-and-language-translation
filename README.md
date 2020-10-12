@@ -11,7 +11,7 @@ We are implementing Optical Character Recognition of different languages and we 
 
 # Why this Project?
 
-Suppose you are planning to visit some place or say country where people speak different language from whatever you speak, and let's say you actually went to visit that place and you saw a banner but you can't figure out what was written over there, and say you need to know what was written over there in order to take next step, this is where you might get in trouble right?, but with our project you need not to be worried about all of these thing, just on click of that banner and then you can actually translated whatever written there in banner in your prefered language.
+Suppose you are planning to visit some place or say country where people speak different language from whatever you speak, and let's say you actually went to visit that place and you saw a banner but you can't figure out what was written over there, and say you need to know what was written over there in order to take next step, this is where you might get in trouble right?, but with our project you need not to be worried about all of these thing, just on taking picture of that banner, you can actually translated whatever written there in banner in your prefered language.
 
 # What else?
 
@@ -35,4 +35,13 @@ So main thing is, you can detect the object and translate that object name in an
 
 
 # Please feel free to access any of these 6 section
+
+# Contact
+ashish.adhikari727@gmail.com
+
+bishwashpokhrel.be18cse@pec.edu.in
+
+anilmeena.be18cse@pec.edu.in
+
+amitsingh.be18cse@pec.edu.in
 
