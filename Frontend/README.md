@@ -4,4 +4,4 @@
 
 # Login Page
 
-![Login](../Images/login_web.jpg)
+![Login](https://github.com/ashish807/OCR-and-language-translation/blob/master/Images/login_web.jpeg)
