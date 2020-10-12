@@ -1,22 +1,38 @@
 # OCR-and-language-translation
 
 # Currently working on it
-We have uploaded all the required documents of this project in [Documents](Documents/) folder. We have uploaded [Project Summary](Documents/Project_Summary.pdf), [UML Class Diagram](Documents/Class_diagram.pdf) and many more in [Documents](Documents/) folder
+
+We have uploaded all the required documents of this project in [Documents](Documents/) folder. We have uploaded [Project Summary](Documents/Project_Summary.pdf), [UML Class Diagram](Documents/Class_diagram.pdf) and many more in [Documents](Documents/) folder, please feel free to access them
 
 
+# The main aim of this project is to help people from different ethnic groups communicate with each other.
 
-We are building a mobile based and web based platform for Optical Character Recognition (OCR) and translating into user desired language.
+We are implementing Optical Character Recognition of different languages and we are translating those recognized characters into user prefered languages.
 
-Beside from OCR, we are implementing Object detection and then translating the text of detected object into user desired language.
+# Why this Project?
 
-Find code for Object Recognition [here](https://github.com/ashish807/OCR-and-language-translation/tree/master/Object%20Detetion)
+Suppose you are planning to visit some place or say country where people speak different language from whatever you speak, and let's say you actually went to visit that place and you saw a banner but you can't figure out what was written over there, and say you need to know what was written over there in order to take next step, this is where you might get in trouble right?, but with our project you need not to be worried about all of these thing, just on click of that banner and then you can actually translated whatever written there in banner in your prefered language.
 
-For trained model used in App click [here](https://github.com/ashish807/OCR-and-language-translation/tree/master/App%20Development/app_dev/assets/tflite)
+# What else?
 
-# login page of our app: 
+Now lets suppose you are in some random countries where people speak some random languages, and say you want to know what does motorcycle called in their language, the cool way to do this is just click the picture of motorcycle and know what does that called in any random languages.
 
-![LoginPage](Images/login_page.jpeg)
+So main thing is, you can detect the object and translate that object name in any prefered language
 
-# Object Detection: 
+# This Project is divided to 6 sections access them accordingly 
 
-![CatDetected](Images/cat_detected.jpeg)
+[1 Android Application](https://github.com/ashish807/OCR-and-language-translation/tree/master/App%20Development/app_dev)
+
+[2 Object Detection](https://github.com/ashish807/OCR-and-language-translation/tree/master/Object%20Detetion)
+
+[3 Language Translation](https://github.com/ashish807/OCR-and-language-translation/tree/master/Language%20Translation)
+
+[4 Optical Character Recognition](https://github.com/ashish807/OCR-and-language-translation/tree/master/OCR)
+
+[5 Frontend](https://github.com/ashish807/OCR-and-language-translation/tree/master/Frontend)
+
+[6 Backend](https://github.com/ashish807/OCR-and-language-translation/tree/master/Backend)
+
+
+# Please feel free to access any of these 6 section
+
