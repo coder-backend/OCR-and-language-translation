@@ -1,7 +1,7 @@
 # OCR-and-language-translation
 
 # Currently working on it
-We have uploaded all the required documents of this project in [Documents](Documents/) folder. We have uploaded [Project Summary](Documents/Project Summary.pdf), [UML Class Diagram](Documents/Class_diagram.pdf) and many more in [Documents](Documents\) folder
+We have uploaded all the required documents of this project in [Documents](Documents/) folder. We have uploaded [Project Summary](Documents/Project_Summary.pdf), [UML Class Diagram](Documents/Class_diagram.pdf) and many more in [Documents](Documents/) folder
 
 
 
