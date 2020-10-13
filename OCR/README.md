@@ -9,4 +9,4 @@ What code contains (This works on English version other language support yet to 
 
 4.Passing the ROI image to tesseract and receive
 
-5.Model which is written as path inference_graph and label is not completed yet 
+5.Model which is written as path inference_graph and label_map is not completed yet 
