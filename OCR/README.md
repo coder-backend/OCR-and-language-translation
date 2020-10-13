@@ -8,3 +8,5 @@ What code contains (This works on English version other language support yet to 
 3.Extracts Region of interest using box coordinates and enhnacing the image with OpenCV
 
 4.Passing the ROI image to tesseract and receive
+
+5.Model which is written as path inference_graph and label is not completed yet 
