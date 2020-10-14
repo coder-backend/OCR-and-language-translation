@@ -10,4 +10,3 @@ What code contains (This works on English ,punjabi,hindi using tessdata of tesse
 4.Passing the ROI image to tesseract and receive a string containing text
 
 ![](https://github.com/ashish807/OCR-and-language-translation/blob/master/Images/detecting.png)
-![](https://github.com/ashish807/OCR-and-language-translation/blob/master/Images/Detected.png)
