@@ -19,7 +19,7 @@ Now lets suppose you are in some random countries where people speak some random
 
 So main thing is, you can detect the object and translate that object name in any prefered language
 
-# This Project is divided to 7 sections access them accordingly 
+# This Project is divided into 7 sections, access them accordingly 
 
 [1 Android Application](https://github.com/ashish807/OCR-and-language-translation/tree/master/App%20Development/app_dev)
 
