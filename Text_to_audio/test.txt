@@ -1,0 +1,35 @@
+OCR and Language Translator
+Motivation:
+Many researchers have focused on improving optical character recognition (OCR) efficiency by
+developing new techniques using image processing-based methodologies. However, the major
+limitations of image processing techniques are their complexity and computational intensity.
+Thus, they are not applicable to some real-time application. This problem seems interesting to
+me and my team, so we thought why don’t we spend some time and figure this out, how we
+can improve the traditional OCR techniques. And there’s one extra thing which really drew
+attention of my team towards improving OCR, i.e. Language translation. What if we really
+obtain high accuracy on OCR , then using this improved version of OCR techniques we can
+translate text obtained from OCR model to any language effectively. Though G-Translate app
+has this feature but it’s not that much effective in the real time.
+Project Description:
+ Tools:
+ → We are using python as a programming Language.
+ → Tools for this project are, Deep Learning (CNN, NLP), TensorFlow, pyTorch.
+Challenges:
+ → We are doing OCR, object Detection and Language Translation, so main
+challenge is the accuracy at the real time.
+
+
+Deliverables:
+➔ Final output is the text in the form of user desirable language. Suppose I am in Punjab
+and I want to read the banner, then what I will do is, first click the picture of the banner,
+and select the language that I want to convert the text in banner (say English), then I fed
+the clicked image into the app, and our app will show the exact meaning of what is
+written in that banner in English language.
+➔ Main feature of our app will be the language translation, and we planned to add one
+extra feature i.e. Object detection. So, our app will also detect the objects in the picture
+and translate the meaning of that object into desirable language. Suppose I clicked
+picture of bird, and now I want to know what does bird mean in Hindi, now I fed the
+picture of bird into our app, and our app will show चिडिया.
+➔ We are planning to do object detection and language translation at the very instant (in
+the real time). I mean, user need not to click the image in order to translate, user will
+just open the camera and focus on the banner or object and our app will do rest.
