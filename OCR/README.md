@@ -1,5 +1,5 @@
 # Optical Character Recognition
-What code contains (This works on English version other language support yet to develop like punjabi,hindi)
+What code contains (This works on English ,punjabi,hindi using tessdata of tesseract)
 
 1.Used Object detection first with openCV , capture frames with openCV
 
@@ -7,6 +7,5 @@ What code contains (This works on English version other language support yet to 
 
 3.Extracts Region of interest using box coordinates and enhnacing the image with OpenCV
 
-4.Passing the ROI image to tesseract and receive
+4.Passing the ROI image to tesseract and receive a string containing text
 
-5.Model which is written as path inference_graph and label_map is not completed yet 
