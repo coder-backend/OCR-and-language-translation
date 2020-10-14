@@ -4,6 +4,7 @@
 
 We have uploaded all the required documents of this project in [Documents](Documents/) folder. We have uploaded [Project Summary](Documents/Project_Summary.pdf), [UML Class Diagram](Documents/Class_diagram.pdf) and many more in [Documents](Documents/) folder, please feel free to access them
 
+If you're having trouble in fetching the documents then please [click here](https://drive.google.com/drive/folders/1tKk6jZ-K9PmyAHa8lj9Tq65ICirgrGAY?usp=sharing).
 
 # The main aim of this project is to help people from different ethnic groups communicate with each other.
 
