@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:app_dev/Inside_app/camera_or_gallery.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:image_cropper/image_cropper.dart';
 import 'package:tflite/tflite.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -53,11 +54,23 @@ class _TfliteHomeState extends State<TfliteHome> {
   selectFromImagePicker() async {
     var image = await ImagePicker.pickImage(source: ImageSource.gallery);
     errorImage = image;
-    if (image == null) return;
+    File cameraCropped = await ImageCropper.cropImage(
+        sourcePath: image.path,
+        compressQuality: 100,
+        maxHeight: 500,
+        maxWidth: 900,
+        compressFormat: ImageCompressFormat.jpg,
+        androidUiSettings: AndroidUiSettings(
+            showCropGrid: true,
+            toolbarColor: Colors.deepOrange,
+            toolbarTitle: "Adjust Image",
+            statusBarColor: Colors.deepOrange.shade900,
+            backgroundColor: Colors.white));
+    if (cameraCropped == null) return;
     setState(() {
       _busy = true;
     });
-    predictImage(image);
+    predictImage(cameraCropped);
   }
 
   predictImage(File image) async {

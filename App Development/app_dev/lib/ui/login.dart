@@ -1,4 +1,5 @@
 import 'package:app_dev/Inside_app/camera_or_gallery.dart';
+import 'package:app_dev/Inside_app/home.dart';
 import 'package:flutter/material.dart';
 import '../Inside_app/camera_or_gallery.dart';
 import 'package:flutter/services.dart';
@@ -272,7 +273,8 @@ class _LoginState extends State<Login> {
   }
 
   void signin(context) {
-    Navigator.push(context, MaterialPageRoute(builder: (context) => Options()));
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => HomePage()));
   }
 
   void _toggleLogin() {

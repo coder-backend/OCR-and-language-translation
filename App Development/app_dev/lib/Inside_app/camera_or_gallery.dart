@@ -1,5 +1,6 @@
 import 'package:app_dev/Inside_app/fromCamera.dart';
 import 'package:app_dev/Inside_app/fromGallery.dart';
+import 'package:app_dev/Inside_app/home.dart';
 import 'package:app_dev/Team_Member/team.dart';
 import 'package:flutter/material.dart';
 
@@ -25,16 +26,23 @@ class OptionsState extends State<Options> {
             color: Colors.black, //change your color here
           ),
           title: Text(
-            "Welcome",
+            "Object Detection",
             style: TextStyle(color: Colors.white),
           ),
-          backgroundColor: Colors.teal,
+          backgroundColor: Colors.blueAccent,
           centerTitle: true,
+          automaticallyImplyLeading: true,
+          leading: IconButton(
+              icon: Icon(Icons.arrow_back_ios),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => HomePage()));
+              }),
         ),
         body: Container(
           decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage("assets/img/robot.jpg"), fit: BoxFit.cover),
+                image: AssetImage("assets/img/objectD.jpg"), fit: BoxFit.cover),
           ),
           child: Row(
             children: <Widget>[
