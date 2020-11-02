@@ -10,5 +10,5 @@ const TEAM_DATA = [
     "brand": "bishwash.pokhrel1@gmail.com",
     "image": "bishwash.jpeg"
   },
-  {"name": "Amit", "brand": "amit@gmail.com", "image": "amit.jpeg"},
+  {"name": "Amit", "brand": "mahla.amit1077@gmail.com", "image": "amit.jpg"},
 ];

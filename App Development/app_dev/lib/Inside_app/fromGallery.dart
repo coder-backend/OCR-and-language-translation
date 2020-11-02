@@ -1,8 +1,11 @@
 import 'dart:io';
 
 import 'package:app_dev/Inside_app/camera_or_gallery.dart';
+import 'package:app_dev/Inside_app/ocr.dart';
+import 'package:app_dev/Inside_app/translator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 import 'package:image_cropper/image_cropper.dart';
 import 'package:tflite/tflite.dart';
 import 'package:image_picker/image_picker.dart';
@@ -15,6 +18,7 @@ class TfliteHome extends StatefulWidget {
 }
 
 class _TfliteHomeState extends State<TfliteHome> {
+  String objectText = "Nothing";
   String _model = ssd;
   File _image;
   var errorImage;
@@ -114,6 +118,7 @@ class _TfliteHomeState extends State<TfliteHome> {
     return _recognitions.map((re) {
       for (var i = 0; i < _recognitions.length; i++) {
         if (_recognitions[i]["confidenceInClass"] > 0.60) {
+          objectText = _recognitions[i]["detectedClass"];
           return Positioned(
             left: _recognitions[i]["rect"]["x"] * factorX,
             top: _recognitions[i]["rect"]["y"] * factorY,
@@ -216,10 +221,63 @@ class _TfliteHomeState extends State<TfliteHome> {
                   context, MaterialPageRoute(builder: (context) => Options()));
             }),
       ),
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.image),
-        tooltip: "Pick Image from gallery",
-        onPressed: selectFromImagePicker,
+      floatingActionButton: SpeedDial(
+        // both default to 16
+        marginRight: 18,
+        marginBottom: 20,
+        animatedIcon: AnimatedIcons.menu_close,
+        animatedIconTheme: IconThemeData(size: 22.0),
+        // this is ignored if animatedIcon is non null
+        // child: Icon(Icons.add),
+        visible: true,
+        // If true user is forced to close dial manually
+        // by tapping main button and overlay is not rendered.
+        closeManually: false,
+        curve: Curves.bounceIn,
+        overlayColor: Colors.black,
+        overlayOpacity: 0.5,
+        onOpen: () => print('OPENING DIAL'),
+        onClose: () => print('DIAL CLOSED'),
+        tooltip: 'Speed Dial',
+        heroTag: 'speed-dial-hero-tag',
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.black,
+        elevation: 8.0,
+        shape: CircleBorder(),
+        children: [
+          SpeedDialChild(
+              child: Icon(Icons.image),
+              backgroundColor: Colors.red,
+              label: 'Gallery',
+              labelStyle: TextStyle(fontSize: 18.0),
+              onTap: () {
+                selectFromImagePicker();
+              }),
+          SpeedDialChild(
+            child: Icon(Icons.translate),
+            backgroundColor: Colors.blue,
+            label: "Translate",
+            labelStyle: TextStyle(fontSize: 18.0),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => Translator(
+                            text: objectText,
+                          )));
+            },
+          ),
+          SpeedDialChild(
+            child: Icon(Icons.change_history),
+            backgroundColor: Colors.green,
+            label: 'OCR',
+            labelStyle: TextStyle(fontSize: 18.0),
+            onTap: () {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (ctx) => OCR()));
+            },
+          ),
+        ],
       ),
       body: Stack(
         children: stackChildren,
