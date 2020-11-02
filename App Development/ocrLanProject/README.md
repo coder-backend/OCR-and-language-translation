@@ -1,6 +1,5 @@
 # Android Application for Optical Character Recognition and Language Translation
 
-
 We are building this Android App so that peoples can use our project in day to day basis. 
 
 Till now, we have implemented object detection part and we are working on the OCR and language translation part. 
