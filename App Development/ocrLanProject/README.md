@@ -1,8 +1,5 @@
-# app_dev
+# Android Application for Optical Character Recognition and Language Translation
 
-A new Flutter project.
-
-## This section is for android application of our project
 
 We are building this Android App so that peoples can use our project in day to day basis. 
 
