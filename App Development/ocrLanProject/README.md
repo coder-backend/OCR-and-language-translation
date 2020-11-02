@@ -22,13 +22,23 @@ We are planning to train our own model and run that trained model in backend, bu
 
 # This is our home page
 
-![home](https://github.com/ashish807/OCR-and-language-translation/blob/master/Images/app_home.jpeg)
+![home](https://github.com/ashish807/OCR-and-language-translation/blob/master/Images/home.PNG)
 
-As you can see it is very easy figure out what to do next.
+As you can see, it is very easy figure out what to do next.
 
-# Click on camera button if you want to detect live object otherwise click gallery
 
-# Long press on Team Member button to know the contributors of this project
+# Click on desired button
+
+# Demo of object detection
+
+![object](https://github.com/ashish807/OCR-and-language-translation/blob/master/Images/objectDetection.jpeg)
+
+# Demo of Language Translation
+
+![language](https://github.com/ashish807/OCR-and-language-translation/blob/master/Images/LanguageTranslationDemo.PNG)
+
+
+# Press on Team Member button to know the contributors of this project
 
 ![Team](https://github.com/ashish807/OCR-and-language-translation/blob/master/Images/team.jpeg)
 
