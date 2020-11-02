@@ -22,7 +22,7 @@ So main thing is, you can detect the object and translate that object name in an
 
 # This Project is divided into 7 sections, access them accordingly 
 
-[1 Android Application](https://github.com/ashish807/OCR-and-language-translation/tree/master/App%20Development/app_dev)
+[1 Android Application](https://github.com/ashish807/OCR-and-language-translation/tree/master/App%20Development/ocrLanProject)
 
 [2 Object Detection](https://github.com/ashish807/OCR-and-language-translation/tree/master/Object%20Detetion)
 
