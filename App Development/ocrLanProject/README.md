@@ -1,5 +1,7 @@
 # Android Application for Optical Character Recognition and Language Translation
 
+# Download APK file fro this [link](https://drive.google.com/drive/folders/1qvyiy0-t72qvkly3he0Jh3SYG1-AEIOc?usp=sharing)
+
 We are building this Android App so that peoples can use our project in day to day basis. 
 
 Till now, we have implemented object detection part and we are working on the OCR and language translation part. 
