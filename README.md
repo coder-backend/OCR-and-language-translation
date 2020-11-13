@@ -1,6 +1,6 @@
 # OCR-and-language-translation
 
-# Currently working on it
+# Download the APK file from this [link](https://drive.google.com/drive/folders/1qvyiy0-t72qvkly3he0Jh3SYG1-AEIOc?usp=sharing)
 
 We have uploaded all the required documents of this project in [Documents](Documents/) folder. We have uploaded [Project Summary](Documents/Project_Summary.pdf), [Write Up](Documents/WriteUp.pdf), [UML Class Diagram](Documents/Class_diagram.pdf) and many more in [Documents](Documents/) folder, please feel free to access them
 
