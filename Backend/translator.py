@@ -1,11 +1,13 @@
 import re
 import tensorflow as tf
 import numpy as np
+import numpy
 import time
 import os
 import pickle
 import model
-from model import Encoder,Decoder
+from model import Encoder,Decoder,BahdanauAttention
+import pathlib
 
 # BATCH_SIZE = 64
 # units = 512
@@ -18,7 +20,6 @@ from model import Encoder,Decoder
 # checkpoint = tf.train.Checkpoint(optimizer=optimizer,
 #                                  encoder=encoder,
 #                                  decoder=decoder)
-
 class Lang:
     def __init__(self,name):
       #Here we are maintaining three dictionaries, one to convert word into index,another index into word and count.
@@ -129,7 +130,7 @@ def evaluate(sentence):
     result += output_lang.index2word[predicted_id] + ' '
 
     if output_lang.index2word[predicted_id] == '<end>':
-      return result, sentence, attention_plot
+      return result, sentence
 
     # the predicted ID is fed back into the model
     dec_input = tf.expand_dims([predicted_id], 0)
@@ -155,31 +156,70 @@ def translate(sentence):
   result, sentence = evaluate(sentence)
 
   print('Input: %s' % (sentence))
+  print(result)
   return result
 
   # attention_plot = attention_plot[:len(result.split(' ')), :len(sentence.split(' '))]
   # plot_attention(attention_plot, sentence.split(' '), result.split(' '))
 
-def transform(sentence,l1,l2):
+def transform(sentence,l1,l2,op_lang):
+  if op_lang=="hi":
+        dir="training_checkpoints"
+        with open("tensors1.pkl",'rb') as f:
+          example_input_batch=pickle.load(f)
+          example_target_batch=pickle.load(f)
+  elif op_lang=="nep":
+        dir="training_nepali"
+        with open("tensors_nep.pkl",'rb') as f:
+          example_input_batch=pickle.load(f)
+          example_target_batch=pickle.load(f)
+
+  elif op_lang=="pun":
+        dir="training_punjabi"
+        with open("tensors_pun.pkl",'rb') as f:
+          example_input_batch=pickle.load(f)
+          example_target_batch=pickle.load(f)
+  print(example_input_batch)
+
   global input_lang,output_lang
   input_lang=l1
   output_lang=l2
-
+  global BATCH_SIZE,units,embedding_dim
+  BATCH_SIZE = 64
+  units = 512
+  if op_lang=="pun":
+      units=1024
+  embedding_dim = 256
   vocab_inp_size = len(input_lang.word2index)+1
   vocab_tar_size = len(output_lang.word2index)+1
+  global encoder,decoder,optimizer
   optimizer = tf.keras.optimizers.Adam()
-  decoder = Decoder(vocab_tar_size, embedding_dim, units, BATCH_SIZE)
+  loss_object = tf.keras.losses.SparseCategoricalCrossentropy(
+    from_logits=True, reduction='none')
   encoder = Encoder(vocab_inp_size, embedding_dim, units, BATCH_SIZE)
+  sample_hidden = encoder.initialize_hidden_state()
+
+  sample_output, sample_hidden = encoder(example_input_batch, sample_hidden)
+  attention_layer = BahdanauAttention(10)
+  attention_result, attention_weights = attention_layer(sample_hidden, sample_output)
+  decoder = Decoder(vocab_tar_size, embedding_dim, units, BATCH_SIZE)
+  sample_decoder_output, _, _ = decoder(tf.random.uniform((BATCH_SIZE, 1)),
+                                      sample_hidden, sample_output)
+
   checkpoint = tf.train.Checkpoint(optimizer=optimizer,
                                  encoder=encoder,
                                  decoder=decoder)
 
-  print(encoder)
-  curr= os.path.abspath(__file__)
-  temp=os.path.join(curr,"available_models")
-  checkpoint_dir=os.path.join(temp,"training_checkpoints")
-  checkpoint.restore(tf.train.latest_checkpoint(checkpoint_dir))
-  print(encoder)
+  curr= pathlib.Path(__file__)
+  print(encoder.summary())
+  temp=os.path.join(curr.parent,"available_models")
+  checkpoint_dir=os.path.join(temp,dir)
+  print(checkpoint_dir)
+  checkpoint_prefix = os.path.join(checkpoint_dir, "ckpt")
+  print(checkpoint_dir)
+  print(checkpoint.restore(tf.train.latest_checkpoint(checkpoint_dir)))
+  # print(checkpoint.restore(checkpoint_dir))
+  print(encoder.summary())
   return translate(sentence)
 
 
