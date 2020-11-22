@@ -1,0 +1,33 @@
+/* Colors */
+
+.bg-red-grad{
+
+    background-image: -moz-linear-gradient(#DC3545, #B22519);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#DC3545), to(#B22519));
+    background-image: -webkit-linear-gradient(#DC3545, #B22519);
+    background-image: -o-linear-gradient(#DC3545, #B22519);
+    background-image: -ms-linear-gradient(#DC3545, #B22519);
+    background-image: linear-gradient(#DC3545, #B22519);
+
+}
+
+.text-shadow{
+      text-shadow: 0 1px 0 #000;
+}
+
+.border-radius-top-lg{
+border-radius:5px 5px 0px 0px ;
+}
+.bg-tumb{
+background:#5D7B9D;
+
+}
+.bg-blue{
+background:#3366CC !important;
+color:#fff !important;
+}
+.hover-danger:hover{
+background:#DC3545 !important;
+color:#fff !important;
+
+}

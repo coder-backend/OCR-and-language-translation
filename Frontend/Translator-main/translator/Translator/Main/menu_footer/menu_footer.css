@@ -1,0 +1,1310 @@
+.h-icon {
+	cursor: pointer;
+	border: 1px solid #d4d4d4;
+	font-size: 16px;
+	color: #444444;
+	padding: 8px 12px 8px 12px;
+	height: 34px;
+}
+
+.h-icon a {
+	color: #444444;
+}
+
+.ficon:hover {
+	background: #4267B2;
+}
+
+.h-icon:hover i {
+	color: #F8F9FA;
+}
+
+.gicon:hover {
+	background: #BB4539;
+}
+
+.twicon:hover {
+	background: #2CAAE1;
+}
+
+.ricon:hover {
+	background: #E43E01;
+}
+
+.licon:hover {
+	background: #0077B5;
+}
+
+.tmicon:hover {
+	background: #5D7B9D;
+}
+
+.ficon {
+	padding: 8px 12px 8px 12px;
+}
+
+.gicon {
+	padding: 8px 6px 8px 6px;
+	;
+}
+
+.twicon {
+	padding: 8px 8px 8px 8px;
+}
+
+.ricon {
+	padding: 8px 8px 8px 8px;
+}
+
+.licon {
+	padding: 9px 9px 9px 9px;
+}
+
+.tmicon {
+	padding: 8px 12px 8px 12px;
+}
+
+.s-in {
+	padding: 8px 0px 8px 8px;
+	border: 1px solid #E97900;
+	font-size: 16px;
+	height: 34px;
+	margin: 0px;
+	background: #fff;
+}
+
+.sicon {
+	cursor: pointer;
+	border: 1px solid #E97900;
+	font-size: 16px;
+	color: #444444;
+	padding: 8px 12px 8px 12px;
+	height: 34px;
+	background: -moz-linear-gradient(#E97900, #D06C00);
+	background: -webkit-linear-gradient(#E97900, #D06C00);
+	background: -o-linear-gradient(#E97900, #D06C00);
+	background: -ms-linear-gradient(#E97900, #D06C00);
+	background: linear-gradient(#E97900, #D06C00);
+}
+
+.sicon a {
+	color: #F8F9FA;
+}
+
+.s-in input {
+	border: 0px;
+	background: #fff;
+}
+
+.sendbtn {
+	color: #fff;
+	background: -moz-linear-gradient(#E97900, #D06C00);
+	border: 0px;
+	background: -webkit-linear-gradient(#E97900, #D06C00);
+	background: -o-linear-gradient(#E97900, #D06C00);
+	background: -ms-linear-gradient(#E97900, #D06C00);
+	background: linear-gradient(#E97900, #D06C00);
+	cursor: pointer;
+}
+
+.f-input,
+.f-input:focus {
+	background: #484953;
+	border: 1px solid #6E6F73;
+	color: #B8B6B6;
+}
+
+.f-h {
+	font-family: "Oswald", sans-serif;
+	color: #ccc;
+}
+
+.cnt {
+	font-family: 'Titillium Web', sans-serif;
+	text-align: left;
+}
+
+.f-in {
+	padding: 8px 0px 8px 8px;
+	border: 1px solid #E97900;
+	font-size: 16px;
+	height: 34px;
+	margin: 0px;
+	background: #484953;
+	color: #B8B6B6;
+}
+
+.f-in input {
+	border: 0px;
+	background: #484953;
+	color: #B8B6B6;
+	width: 65%;
+}
+
+.bicon {
+	border-radius: 50%;
+}
+
+.bicon i {
+	color: #B7B5B5;
+}
+
+.bicon:hover i {
+	color: #F8F9FA;
+}
+
+.flink {
+	color: #B7B5B5;
+}
+
+.flink:hover {
+	color: #fff;
+}
+
+.hlogo {
+	height: 70px;
+}
+
+.flogo {
+	height: 50px;
+}
+
+footer {
+	padding: 10px;
+}
+
+.blw {
+	margin-top: 180px;
+}
+
+.link_block {
+	margin: 30px;
+}
+.h-c{
+
+padding:0 12px;
+}
+@media screen and (max-width: 720px) {
+	.blw {
+		margin-top: 250px;
+	}
+	.link_block {
+		margin: 5px;
+	}
+ .h-c{
+
+padding:4px;
+}
+}
+
+@media screen and (max-width: 440px) {
+	.blw {
+		margin-top: 280px;
+	}
+ .h-c{
+
+padding:1px;
+}
+}
+
+.bl {
+	cursor: pointer;
+}
+
+.bl:hover {
+	background: #F6F6FF;
+	cursor: pointer;
+}
+
+nav a {
+	display: inline-block;
+	padding: 7px 12px 7px 12px;
+	 
+	color: #fff;
+	outline: none;
+}
+
+nav {
+	background: #444444;
+	border-top: 2px solid #ff7f50;
+	font-family: 'Oswald', sans-serif;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	z-index: 99999;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1), 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+ 
+ 
+.sm_menu li {
+	display: inline-block;
+}
+
+
+.home_link:hover {
+	background: #EC8517;
+	color: #fff;
+}
+
+nav ul ul a:hover {
+	color: #fff;
+ 
+}
+.ruby-menu-mega div a {
+	color: #294a7d !important;
+ font-size:16px;
+ font-family: 'Hind', sans-serif;
+}
+.menu,
+.sm_menu {
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	width: 100%;
+	margin: 0px;
+line-height:38px;
+}
+
+.menu:before,
+.menu:after {
+	content: "";
+	display: table;
+}
+
+.menu:after {
+	clear: both;
+}
+
+
+.sm_menu:hover a{
+	 
+color:#fff;
+}
+
+nav a {
+	line-height: 1.3;
+}
+
+
+
+.sm_links a {
+	display: block; 
+border-top:1px solid #666;
+}
+
+.sm_links a:hover {
+	color: #fff;
+	 
+}
+
+.sb_links a:hover {
+	color: #fff;
+	background: #8EA9C0;
+}
+
+.sb_links a {
+	color: #676767;
+	border-bottom: 1px solid #eee;
+	border-top: none;
+	background: #f7f7f7;
+}
+
+.sm_active {
+	background: #EC8517;
+}
+
+div.ruby-menu-demo-header {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    z-index: 99999;
+ 
+}
+
+  
+  
+@media(min-width: 768px) and (max-width:991px) {
+    body {
+        overflow-x:hidden
+    }
+
+   
+}
+
+@media(max-width: 767px) {
+    div.ruby-menu-demo-header {
+        width:100%;
+        height: auto
+    }
+
+    
+}
+
+  
+/* transision */
+
+span.ruby-dropdown-toggle {
+    transition: transform .3s ease
+}
+
+span.ruby-dropdown-toggle:after {
+    transition: transform .3s ease
+}
+
+@media(min-width: 767px) {
+    ul.ruby-menu > li > a:after {
+        transition:all .3s ease
+    }
+
+    ul.ruby-menu > li > ul > li > a:after,ul.ruby-menu > li > ul > li > ul > li > a:after,ul.ruby-menu > li > ul > li > ul > li > ul > li > a:after {
+        transition: all .3s ease
+    }
+
+    ul.ruby-menu > li > ul,ul.ruby-menu > li > div {
+        transform: translateY(25px);
+        transition: all .3s ease
+    }
+
+    ul.ruby-menu > li:hover > ul,ul.ruby-menu > li:hover > div {
+        transform: translateY(0)
+    }
+
+    ul.ruby-menu.ruby-vertical > li > ul,ul.ruby-menu.ruby-vertical > li > div {
+        transform: translateX(25px);
+        transition: all .3s ease
+    }
+
+    ul.ruby-menu.ruby-vertical > li:hover > ul,ul.ruby-menu.ruby-vertical > li:hover > div {
+        transform: translateX(0)
+    }
+
+    ul.ruby-menu > li > ul > li > ul,ul.ruby-menu > li > ul > li > ul > li > ul,ul.ruby-menu > li > ul > li > ul > li > ul > li > ul {
+        transform: translateX(25px);
+        transition: all .3s ease
+    }
+
+    ul.ruby-menu > li > ul > li:hover > ul,ul.ruby-menu > li > ul > li > ul > li:hover > ul,ul.ruby-menu > li > ul > li > ul > li > ul > li:hover > ul {
+        transform: translateX(0)
+    }
+
+    ul.ruby-menu > li > ul > li.ruby-open-to-left > ul,ul.ruby-menu > li > ul > li > ul > li.ruby-open-to-left > ul,ul.ruby-menu > li > ul > li > ul > li > ul > li.ruby-open-to-left > ul {
+        transform: translateX(-25px);
+        transition: all .3s ease
+    }
+
+    ul.ruby-menu > li > ul > li.ruby-open-to-left:hover > ul,ul.ruby-menu > li > ul > li > ul > li.ruby-open-to-left:hover > ul,ul.ruby-menu > li > ul > li > ul > li > ul > li.ruby-open-to-left:hover > ul {
+        transform: translateX(0)
+    }
+ 
+}
+
+ 
+
+ 
+div.ruby-wrapper ul {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+div.ruby-wrapper > ul {
+    position: relative
+}
+
+ul.ruby-menu > li {
+    float: left;
+    font-size: 14px;
+
+}
+
+ul.ruby-menu > li.ruby-menu-right {
+    float: right
+}
+
+ul.ruby-menu > li > a {
+    display: block;
+    line-height: 38px;
+    padding: 0 25px 0 15px;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Oswald',sans-serif;
+    font-size: 16px;   
+  
+}
+
+ul.ruby-menu > li > a:only-child {
+    padding: 0 15px
+}
+
+ul.ruby-menu > li > a:hover,ul.ruby-menu > li:hover > a,ul.ruby-menu > li.ruby-active-menu-item > a:hover,ul.ruby-menu > li.ruby-active-menu-item:hover > a {
+     background: #ff7f50 !important;
+}
+
+ul.ruby-menu > li > a:only-child:after,ul.ruby-menu > li:hover > a:only-child:after {
+    content: ''
+}
+
+ul.ruby-menu > li.ruby-active-menu-item > a {
+    background: #ff7f50
+}
+
+ul.ruby-menu > li > a .fa {
+    position: relative;
+    
+}
+
+  
+ul.ruby-menu.ruby-menu-dividers > li > a,ul.ruby-menu.ruby-menu-dividers > li.ruby-menu-social > a {
+    border-left: 1px solid #111;
+    border-right: 1px solid #666
+}
+
+ul.ruby-menu.ruby-menu-dividers > li:first-child > a,ul.ruby-menu.ruby-menu-dividers > li.ruby-menu-social:last-child > a {
+    border-left: none
+}
+
+ul.ruby-menu.ruby-vertical.ruby-menu-dividers > li > a {
+    border: none;
+    border-top: 1px solid #111;
+    border-bottom: 1px solid #666
+}
+
+ul.ruby-menu.ruby-vertical.ruby-menu-dividers > li:first-child > a {
+    border-top: none
+}
+
+ul.ruby-menu.ruby-menu-dividers > li > a:hover,ul.ruby-menu.ruby-menu-dividers > li:hover > a {
+    border-right: 1px solid #ff7f50
+}
+
+ul.ruby-menu.ruby-vertical.ruby-menu-dividers > li > a:hover,ul.ruby-menu.ruby-vertical.ruby-menu-dividers > li:hover > a {
+    border-bottom: 1px solid #ff7f50
+}
+
+ul.ruby-menu.ruby-menu-dividers > li.ruby-active-menu-item > a {
+    border-right: 1px solid #ff7f50
+}
+
+ul.ruby-menu.ruby-vertical.ruby-menu-dividers > li.ruby-active-menu-item > a {
+    border-bottom: 1px solid #ff7f50
+}
+
+ul.ruby-menu > li > ul,ul.ruby-menu > li > ul > li > ul,ul.ruby-menu > li > ul > li > ul > li > ul {
+    position: absolute;
+    -webkit-box-shadow: 0 8px 24px -5px #ccc;
+    -moz-box-shadow: 0 8px 24px -5px #ccc;
+    box-shadow: 0 8px 24px -5px #ccc;
+    border-top: 4px solid #ff7f50
+}
+
+ul.ruby-menu > li > ul > li,ul.ruby-menu > li > ul > li > ul > li {
+    position: relative
+}
+
+ul.ruby-menu > li > ul > li > a,ul.ruby-menu > li > ul > li > ul > li > a,ul.ruby-menu > li > ul > li > ul > li > ul > li > a {
+    display: block;
+    min-width: 150px;
+    line-height: 36px;
+    padding: 0 18px 0 18px;
+    background: #fff;
+    color: #294a7d;
+    text-decoration: none;
+    font-size: 16px;
+    border-bottom: 1px solid #efefef;
+}
+
+ul.ruby-menu > li > ul > li:hover > a,ul.ruby-menu > li > ul > li > a:hover,ul.ruby-menu > li > ul > li > ul > li:hover > a,ul.ruby-menu > li > ul > li > ul > li > a:hover,ul.ruby-menu > li > ul > li > ul > li > ul > li:hover > a,ul.ruby-menu > li > ul > li > ul > li > ul > li > a:hover {
+    background: #efefef
+}
+
+ul.ruby-menu > li > ul > li > a:only-child:after,ul.ruby-menu > li > ul > li > ul > li > a:only-child:after,ul.ruby-menu > li > ul > li > ul > li > ul > li > a:only-child:after {
+    content: ""
+}
+
+ul.ruby-menu > li > ul > li > a .fa,ul.ruby-menu > li > ul > li > ul > li > a .fa,ul.ruby-menu > li > ul > li > ul > li > ul > li > a .fa {
+    position: relative;
+    
+}
+
+ul.ruby-menu > li.ruby-menu-right > ul {
+    right: 0
+}
+
+ul.ruby-menu > li > ul > li > ul,ul.ruby-menu > li > ul > li > ul > li > ul {
+    left: 170px;
+    top: -4px;
+    z-index: 100
+}
+
+ul.ruby-menu > li > ul > li.ruby-open-to-left > ul,ul.ruby-menu > li > ul > li > ul > li.ruby-open-to-left > ul {
+    left: auto;
+    right: 170px
+}
+
+ul.ruby-menu > li.ruby-menu-mega > div,ul.ruby-menu > li.ruby-menu-mega-blog > div,ul.ruby-menu > li.ruby-menu-mega-shop > div {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 38px;
+    left: 0;
+    background: #fff;
+    border-top: 4px solid #ff7f50;
+    overflow: hidden;
+    -webkit-box-shadow: 0 8px 24px -5px #ccc;
+    -moz-box-shadow: 0 8px 24px -5px #ccc;
+    box-shadow: 0 8px 24px -5px #ccc
+}
+
+ul.ruby-menu > li.ruby-menu-mega-blog > div > ul.ruby-menu-mega-blog-nav {
+    position: relative;
+    width: 200px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #efefef
+}
+
+ul.ruby-menu > li.ruby-menu-mega-blog > div > ul.ruby-menu-mega-blog-nav > li {
+    font-size: 14px
+}
+
+ul.ruby-menu > li.ruby-menu-mega-blog > div > ul.ruby-menu-mega-blog-nav > li > a {
+    display: block;
+    line-height: 40px;
+    padding: 0 15px;
+    background: #efefef;
+    color: #666;
+    text-decoration: none
+}
+
+ul.ruby-menu > li.ruby-menu-mega-blog > div > ul.ruby-menu-mega-blog-nav > li.ruby-active-menu-item > a {
+    background: #e6e6e6
+}
+
+ul.ruby-menu > li.ruby-menu-mega-blog > div > ul.ruby-menu-mega-blog-nav > li > div {
+    position: absolute;
+    width: 780px;
+    height: auto;
+    min-height: 100%;
+    left: 200px;
+    top: 0;
+    background: #fff
+}
+
+ul.ruby-menu > li.ruby-menu-mega-blog > div > ul.ruby-menu-mega-blog-nav > li:hover > a {
+    background: #ddd
+}
+
+ul.ruby-menu > li.ruby-menu-mega-shop > div {
+    text-align: center;
+    z-index: 999999
+}
+
+ul.ruby-menu > li.ruby-menu-mega-shop > div > ul {
+    width: 100%;
+    background: #efefef;
+    margin: 0 auto;
+    padding: 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 0;
+    z-index: 100
+}
+
+ul.ruby-menu > li.ruby-menu-mega-shop > div > ul > li {
+    display: inline-block;
+    margin: 0
+}
+
+ul.ruby-menu > li.ruby-menu-mega-shop > div > ul > li > a {
+    display: block;
+    padding: 20px 15px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    font-stretch: expanded;
+    color: #666
+}
+
+ul.ruby-menu > li.ruby-menu-mega-shop > div > ul > li:hover > a,ul.ruby-menu > li.ruby-menu-mega-shop > div > ul > li > a:hover,ul.ruby-menu > li.ruby-menu-mega-shop > div > ul > li.ruby-active-menu-item > a {
+    text-decoration: none
+}
+
+ul.ruby-menu > li.ruby-menu-mega-shop > div > ul > li > a {
+    position: relative;
+    text-decoration: none;
+    display: inline-block
+}
+
+ul.ruby-menu > li.ruby-menu-mega-shop > div > ul > li > div {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: auto;
+    margin-top: 1px;
+    text-align: left;
+    background: #fff;
+    z-index: -1
+}
+
+div.ruby-grid,div.ruby-grid-lined {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0
+}
+
+div.ruby-grid > div.ruby-row {
+    position: relative;
+    width: 100%;
+    height: auto
+}
+
+div.ruby-grid > div.ruby-row div.ruby-row [class^="ruby-col"] {
+    margin-top: 16px
+}
+
+div.ruby-grid > div.ruby-row div.ruby-row:first-of-type [class^="ruby-col"] {
+    margin-top: 0
+}
+
+div.ruby-grid.ruby-grid-lined > div.ruby-row:after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+    background: -webkit-linear-gradient(left,rgba(204,204,204,0) 0%,rgba(204,204,204,0.48) 24%,rgba(204,204,204,1) 50%,rgba(204,204,204,0.42) 79%,rgba(204,204,204,0) 100%)
+}
+
+div.ruby-grid.ruby-grid-lined > div.ruby-row:last-child:after {
+    height: 0
+}
+
+div.ruby-grid > div.ruby-row::after {
+    content: "";
+    display: table;
+    clear: both
+}
+
+div.ruby-grid > div.ruby-row [class^="ruby-col"] {
+    position: relative;
+    float: left;
+    height: auto
+}
+
+div.ruby-grid > div.ruby-row > [class^="ruby-col"] {
+    padding: 16px
+}
+
+div.ruby-grid > div.ruby-row > [class^="ruby-col"] [class^="ruby-col"] {
+    padding-left: 16px
+}
+
+div.ruby-grid > div.ruby-row > [class^="ruby-col"] [class^="ruby-col"]:first-of-type {
+    padding-left: 0
+}
+
+div.ruby-grid > div.ruby-row div.ruby-col-1 {
+    width: 8.33%
+}
+
+div.ruby-grid > div.ruby-row div.ruby-col-2 {
+    width: 16.66%
+}
+
+div.ruby-grid > div.ruby-row div.ruby-col-3 {
+    width: 25%
+}
+
+div.ruby-grid > div.ruby-row div.ruby-col-4 {
+    width: 33.33%
+}
+
+div.ruby-grid > div.ruby-row div.ruby-col-5 {
+    width: 41.66%
+}
+
+div.ruby-grid > div.ruby-row div.ruby-col-6 {
+    width: 50%
+}
+
+div.ruby-grid > div.ruby-row div.ruby-col-7 {
+    width: 58.33%
+}
+
+div.ruby-grid > div.ruby-row div.ruby-col-8 {
+    width: 66.66%
+}
+
+div.ruby-grid > div.ruby-row div.ruby-col-9 {
+    width: 75%
+}
+
+div.ruby-grid > div.ruby-row div.ruby-col-10 {
+    width: 83.33%
+}
+
+div.ruby-grid > div.ruby-row div.ruby-col-11 {
+    width: 91.66%
+}
+
+div.ruby-grid > div.ruby-row div.ruby-col-12 {
+    width: 100%
+}
+
+div.ruby-grid.ruby-grid-lined > div.ruby-row > div[class^="ruby-col"]:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    right: 0;
+    background: -webkit-linear-gradient(top,rgba(204,204,204,0) 0%,rgba(204,204,204,0.48) 24%,rgba(204,204,204,1) 50%,rgba(204,204,204,0.42) 79%,rgba(204,204,204,0) 100%)
+}
+
+div.ruby-grid.ruby-grid-lined > div.ruby-row > div[class^="ruby-col"]:last-child:after {
+    width: 0
+}
+
+div.ruby-grid img {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+    display: block
+}
+
+h3.ruby-list-heading {
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+    margin: 0
+}
+
+ul.ruby-menu > li.ruby-menu-mega > div ul,ul.ruby-menu > li.ruby-menu-mega-shop > div > ul > li > div ul {
+    margin: 0;
+    margin-top: 5px;margin-bottom:10px;
+}
+
+ul.ruby-menu > li.ruby-menu-mega > div ul li,ul.ruby-menu > li.ruby-menu-mega-shop > div > ul > li > div ul > li {
+    position: relative;
+    font-size: 14px;
+    line-height: 28px;
+    line-height: 28px;
+    display: block;
+    width: 100%
+}
+
+ul.ruby-menu > li.ruby-menu-mega > div ul li > a,ul.ruby-menu > li.ruby-menu-mega-shop > div > ul > li > div ul > li > a {
+    text-decoration: none;
+    color: #555;
+    display: inline-block
+}
+
+ul.ruby-menu > li.ruby-menu-mega > div ul li > a:hover,ul.ruby-menu > li.ruby-menu-mega-shop > div > ul > li > div ul > li > a:hover {
+    color: #222;
+    text-decoration: underline
+}
+
+ul.ruby-menu > li.ruby-menu-mega > div ul li .fa,ul.ruby-menu > li.ruby-menu-mega-shop > div > ul > li > div ul > li .fa {
+    position: relative;
+  
+}
+
+ul.ruby-menu > li.ruby-menu-mega > div ul.ruby-list-with-images li {
+    height: 50px
+}
+
+ul.ruby-menu > li.ruby-menu-mega > div ul.ruby-list-with-images li span.ruby-list-desc {
+    font-size: 11px;
+    display: block;
+    position: absolute;
+    top: 16px;
+    left: 72px;
+    color: #999
+}
+
+ul.ruby-menu > li.ruby-menu-mega > div ul li > a > img {
+    float: left;
+    width: 60px;
+    margin-right: 12px
+}
+
+span.ruby-c-title,span.ruby-c-category,span.ruby-c-date {
+    position: relative;
+    display: block
+}
+
+span.ruby-c-title a,span.ruby-c-category a,span.ruby-c-date a {
+    text-decoration: none
+}
+
+span.ruby-c-title,span.ruby-c-title a {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: capitalize;
+    line-height: 20px;
+    margin-top: -5px;
+    color: #222
+}
+
+span.ruby-c-title a:hover {
+    color: #444;
+    text-decoration: underline
+}
+
+span.ruby-c-category,span.ruby-c-category a {
+    font-size: 11px;
+    margin: 9px 0;
+    color: #444
+}
+
+span.ruby-c-date,span.ruby-c-date a {
+    font-size: 11px;
+    color: #444
+}
+
+span.ruby-c-category a:hover,span.ruby-c-date a:hover {
+    color: #ff7f50
+}
+
+div.ruby-c-inline {
+    display: block;
+    position: relative;
+    height: 14px;
+    margin: 7px 0
+}
+
+div.ruby-c-inline span.ruby-c-category,div.ruby-c-inline span.ruby-c-date {
+    position: absolute;
+    display: inline-block
+}
+
+div.ruby-c-inline span.ruby-c-date {
+    right: 0
+}
+
+div.ruby-c-inline span.ruby-c-category,div.ruby-c-inline span.ruby-c-category a {
+    margin: 0
+}
+
+span.ruby-c-content {
+    display: block;
+    position: relative;
+    top: 7px;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: justify
+}
+
+.ruby-wrapper .visible-xs {
+    visibility: hidden;
+    position: absolute
+}
+
+@media(min-width: 768px) {
+    div.ruby-wrapper.ruby-menu-transparent {
+        background:none
+    }
+
+    div.ruby-wrapper.ruby-menu-transparent > ul.ruby-menu > li.ruby-active-menu-item > a {
+        background: none
+    }
+
+    div.ruby-wrapper.ruby-menu-transparent > ul.ruby-menu > li.ruby-menu-social > a {
+        border: none
+    }
+
+    div.ruby-wrapper.ruby-menu-transparent > ul.ruby-menu.ruby-menu-dividers > li > a {
+        border: none
+    }
+
+    div.ruby-wrapper.ruby-menu-transparent > ul.ruby-menu > li:hover > a,div.ruby-wrapper.ruby-menu-transparent > ul.ruby-menu > li > a:hover,div.ruby-wrapper.ruby-menu-transparent > ul.ruby-menu.ruby-menu-dividers > li:hover > a,div.ruby-wrapper.ruby-menu-transparent > ul.ruby-menu.ruby-menu-dividers > li > a:hover {
+        background: none;
+        color: #e2e2e2
+    }
+
+    div.ruby-wrapper.ruby-menu-transparent > ul.ruby-menu > li.ruby-menu-social.ruby-menu-search > a:hover,div.ruby-wrapper.ruby-menu-transparent > ul.ruby-menu > li.ruby-menu-social.ruby-menu-search:hover > a {
+        background: none
+    }
+
+    div.ruby-wrapper.ruby-menu-full-width {
+       
+    }
+
+    div.ruby-wrapper.ruby-menu-full-width > ul.ruby-menu {
+        
+        margin: 0 auto
+    }
+
+    ul.ruby-menu > li > ul,ul.ruby-menu > li > ul > li > ul,ul.ruby-menu > li > ul > li > ul > li > ul {
+        visibility: hidden;
+        opacity: 0
+    }
+
+    ul.ruby-menu > li:hover > ul,ul.ruby-menu > li > ul > li:hover > ul,ul.ruby-menu > li > ul > li > ul > li:hover > ul {
+        visibility: visible;
+        opacity: 1
+    }
+
+    ul.ruby-menu > li.ruby-menu-mega > div,ul.ruby-menu > li.ruby-menu-mega-blog > div,ul.ruby-menu > li.ruby-menu-mega-shop > div {
+        visibility: hidden;
+        opacity: 0
+    }
+
+    ul.ruby-menu > li.ruby-menu-mega:hover > div,ul.ruby-menu > li.ruby-menu-mega-blog:hover > div,ul.ruby-menu > li.ruby-menu-mega-shop:hover > div {
+        visibility: visible;
+        opacity: 1
+    }
+
+    ul.ruby-menu > li.ruby-menu-mega-blog > div > ul.ruby-menu-mega-blog-nav > li > div {
+        visibility: hidden;
+        opacity: 0
+    }
+
+    ul.ruby-menu > li.ruby-menu-mega-blog:hover > div > ul.ruby-menu-mega-blog-nav > li.ruby-active-menu-item > div {
+        visibility: visible;
+        opacity: 1
+    }
+
+    ul.ruby-menu > li.ruby-menu-mega-blog > div > ul.ruby-menu-mega-blog-nav > li:hover > div {
+        visibility: visible;
+        opacity: 1;
+        z-index: 101
+    }
+
+    ul.ruby-menu > li.ruby-menu-mega-shop > div > ul > li > div {
+        visibility: hidden;
+        opacity: 0
+    }
+
+    ul.ruby-menu > li.ruby-menu-mega-shop:hover > div > ul > li.ruby-active-menu-item > div,ul.ruby-menu > li.ruby-menu-mega-shop > div > ul > li:hover > div {
+        visibility: visible;
+        opacity: 1
+    }
+
+    ul.ruby-menu > li.ruby-menu-mega-shop > div > ul > li > a:before,ul.ruby-menu > li.ruby-menu-mega-shop > div > ul > li > a:after {
+        height: 1px;
+        position: absolute;
+        content: '';
+        background-color: #ff7f50;
+        width: 0
+    }
+
+    ul.ruby-menu > li.ruby-menu-mega-shop > div > ul > li > a:before {
+        top: 10px;
+        left: 5%
+    }
+
+    ul.ruby-menu > li.ruby-menu-mega-shop > div > ul > li > a:after {
+        bottom: 10px;
+        right: 5%
+    }
+
+    ul.ruby-menu > li.ruby-menu-mega-shop > div > ul > li > a:hover,.snip1217 .current a {
+        color: #333
+    }
+
+    ul.ruby-menu > li.ruby-menu-mega-shop > div > ul > li > a:hover:before,ul.ruby-menu > li.ruby-menu-mega-shop > div > ul > li.ruby-active-menu-item > a:before,ul.ruby-menu > li.ruby-menu-mega-shop > div > ul > li > a:hover:after,ul.ruby-menu > li.ruby-menu-mega-shop > div > ul > li.ruby-active-menu-item > a:after,ul.ruby-menu > li.ruby-menu-mega-shop > div > ul > li:hover > a:before,ul.ruby-menu > li.ruby-menu-mega-shop > div > ul > li:hover > a:after {
+        width: 90%
+    }
+
+    ul.ruby-menu > li > a:after {
+        font-family: "FontAwesome";
+        text-decoration: none;
+        content: '\f107';
+        position: absolute;
+        margin-left: 5px
+    }
+
+    ul.ruby-menu > li:hover > a:after {
+        -webkit-transform: rotate(-180deg);
+        -moz-transform: rotate(-180deg);
+        -o-transform: rotate(-180deg);
+        -ms-transform: rotate(-180deg);
+        transform: rotate(-180deg)
+    }
+
+    ul.ruby-menu > li > ul > li > a:after,ul.ruby-menu > li > ul > li > ul > li > a:after,ul.ruby-menu > li > ul > li > ul > li > ul > li > a:after {
+        font-family: "FontAwesome";
+        text-decoration: none;
+        font-size: 16px;
+        padding: 0;
+        content: '\f105';
+        position: absolute;
+        right: 15px
+    }
+
+    ul.ruby-menu > li > ul > li:hover > a:after,ul.ruby-menu > li > ul > li > ul > li:hover > a:after,ul.ruby-menu > li > ul > li > ul > li > ul > li:hover > a:after {
+        -webkit-transform: rotate(-180deg);
+        -moz-transform: rotate(-180deg);
+        -o-transform: rotate(-180deg);
+        -ms-transform: rotate(-180deg);
+        transform: rotate(-180deg)
+    }
+
+    ul.ruby-menu > li > ul > li.ruby-open-to-left > a:after,ul.ruby-menu > li > ul > li > ul > li.ruby-open-to-left > a:after,ul.ruby-menu > li > ul > li > ul > li > ul > li.ruby-open-to-left > a:after {
+        content: '\f104';
+        right: auto;
+        left: 10px
+    }
+
+    ul.ruby-menu > li > ul > li.ruby-open-to-left:hover > a:after,ul.ruby-menu > li > ul > li > ul > li.ruby-open-to-left:hover > a:after,ul.ruby-menu > li > ul > li > ul > li > ul > li.ruby-open-to-left:hover > a:after {
+        -webkit-transform: rotate(-180deg);
+        -moz-transform: rotate(-180deg);
+        -o-transform: rotate(-180deg);
+        -ms-transform: rotate(-180deg);
+        transform: rotate(-180deg)
+    }
+ 
+}
+
+/* responsive */
+
+@media(max-width: 767px) {
+    div.ruby-wrapper .hidden-xs {
+        visibility:hidden;
+        display: none
+    }
+
+    div.ruby-wrapper {
+        position: absolute;
+     
+        top: 0;
+        background: #111
+    }
+
+    .ruby-wrapper .visible-xs {
+        visibility: visible;
+        position: absolute;
+        left: 0;
+        top: 0
+    }
+
+    div.ruby-wrapper > ul {
+        position: absolute;
+        top: 50px;
+       
+    }
+
+    ul.ruby-menu > li,ul.ruby-menu > li.ruby-menu-right {
+        float: none
+    }
+
+    ul.ruby-menu > li > a {
+        padding: 0 65px;
+        background: #ff7f50
+    }
+
+    ul.ruby-menu > li > a:only-child {
+        padding: 0 65px
+    }
+
+    ul.ruby-menu > li > a:hover,ul.ruby-menu > li:hover > a,ul.ruby-menu > li.ruby-active-menu-item > a:hover {
+        background: #127e61
+    }
+
+    ul.ruby-menu > li.ruby-active-menu-item > a {
+        background: #159572
+    }
+
+    ul.ruby-menu > li.ruby-menu-social > a > span {
+        display: block
+    }
+
+    ul.ruby-menu > li > ul,ul.ruby-menu > li > ul > li > ul,ul.ruby-menu > li > ul > li > ul > li > ul {
+        position: relative;
+        width: 100%;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        border-top: none
+    }
+
+    ul.ruby-menu > li,ul.ruby-menu > li > ul > li,ul.ruby-menu > li > ul > li > ul > li,ul.ruby-menu > li > ul > li > ul > li > ul > li {
+        position: relative
+    }
+
+    ul.ruby-menu > li > ul > li > a,ul.ruby-menu > li > ul > li > ul > li > a,ul.ruby-menu > li > ul > li > ul > li > ul > li > a {
+        width: 100%;
+        line-height: 50px;
+        padding: 0 80px;
+        background: #d1d1d1
+    }
+
+    ul.ruby-menu > li > ul > li:hover > a,ul.ruby-menu > li > ul > li > a:hover,ul.ruby-menu > li > ul > li > ul > li:hover > a,ul.ruby-menu > li > ul > li > ul > li > a:hover,ul.ruby-menu > li > ul > li > ul > li > ul > li:hover > a,ul.ruby-menu > li > ul > li > ul > li > ul > li > a:hover {
+        background: #d9d9d9;
+        color: #111
+    }
+
+    ul.ruby-menu > li > ul > li > ul,ul.ruby-menu > li > ul > li > ul > li > ul {
+        left: auto;
+        top: auto;
+        z-index: auto
+    }
+
+    ul.ruby-menu > li > ul > li.ruby-open-to-left > ul,ul.ruby-menu > li > ul > li > ul > li.ruby-open-to-left > ul {
+        left: auto;
+        right: auto
+    }
+
+    ul.ruby-menu > li > ul > li > ul > li > a {
+        background: #e5e5e5;
+        padding: 0 95px
+    }
+
+    ul.ruby-menu > li > ul > li > ul > li:hover > a,ul.ruby-menu > li > ul > li > ul > li > a:hover {
+        background: #e1e1e1
+    }
+
+    ul.ruby-menu > li > ul > li > ul > li > ul > li > a {
+        background: #efefef;
+        padding: 0 110px
+    }
+
+    ul.ruby-menu > li > ul > li > ul > li > ul > li:hover > a,ul.ruby-menu > li > ul > li > ul > li > ul > li > a:hover {
+        background: #fff
+    }
+ 
+ 
+
+  
+
+    span.ruby-dropdown-toggle {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        max-width: 50px;
+        max-height: 50px;
+        left: 0;
+        top: 0;
+        padding: 10px 17px;
+        z-index: 1000000;
+        cursor: pointer
+    }
+
+    span.ruby-dropdown-toggle:after {
+        font-family: "FontAwesome";
+        text-decoration: none;
+        content: '\f107';
+        color: #fff;
+        font-size: 25px;
+        right: 0
+    }
+
+    span.ruby-dropdown-toggle.ruby-dropdown-toggle-rotate {
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg)
+    }
+
+    ul.ruby-menu > li > a:before,ul.ruby-menu > li > ul > li > a:before,ul.ruby-menu > li > ul > li > ul > li > a:before,ul.ruby-menu > li > ul > li > ul > li > ul > li > a:before,ul.ruby-menu > li.ruby-menu-mega-blog > div > ul.ruby-menu-mega-blog-nav > li > a:before,ul.ruby-menu > li.ruby-menu-mega-shop > div > ul > li > a:before {
+        content: "";
+        width: 50px;
+        height: 50px;
+        background: #333;
+        position: absolute;
+        left: 0;
+        top: 0
+    }
+
+    ul.ruby-menu > li > ul > li > a:before,ul.ruby-menu > li.ruby-menu-mega-blog > div > ul.ruby-menu-mega-blog-nav > li > a:before,ul.ruby-menu > li.ruby-menu-mega-shop > div > ul > li > a:before {
+        background: #555
+    }
+
+    ul.ruby-menu > li > ul > li > ul > li > a:before {
+        background: #777
+    }
+
+    ul.ruby-menu > li > ul > li > ul > li > ul > li > a:before {
+        background: #999
+    }
+
+    
+    div.ruby-grid > div.ruby-row div.ruby-row [class^="ruby-col"] {
+        margin-top: 0
+    }
+
+    div.ruby-grid > div.ruby-row div.ruby-row:first-of-type [class^="ruby-col"] {
+        margin-top: 0
+    }
+
+    div.ruby-grid.ruby-grid-lined > div.ruby-row:after {
+        height: 0
+    }
+
+    div.ruby-grid > div.ruby-row > [class^="ruby-col"] {
+        padding: 0
+    }
+
+    div.ruby-grid > div.ruby-row > [class^="ruby-col"] [class^="ruby-col"] {
+        padding-left: 0
+    }
+
+    div.ruby-grid > div.ruby-row > [class^="ruby-col"] [class^="ruby-col"]:first-of-type {
+        padding-left: 0
+    }
+
+    div.ruby-grid > div.ruby-row div.ruby-col-1,div.ruby-grid > div.ruby-row div.ruby-col-2,div.ruby-grid > div.ruby-row div.ruby-col-3,div.ruby-grid > div.ruby-row div.ruby-col-4,div.ruby-grid > div.ruby-row div.ruby-col-5,div.ruby-grid > div.ruby-row div.ruby-col-6,div.ruby-grid > div.ruby-row div.ruby-col-7,div.ruby-grid > div.ruby-row div.ruby-col-8,div.ruby-grid > div.ruby-row div.ruby-col-9,div.ruby-grid > div.ruby-row div.ruby-col-10,div.ruby-grid > div.ruby-row div.ruby-col-11,div.ruby-grid > div.ruby-row div.ruby-col-12 {
+        width: 100%;
+        padding: 20px 30px
+    }
+
+    div.ruby-grid.ruby-grid-lined > div.ruby-row > div[class^="ruby-col"]:after {
+        width: 0
+    }
+ 
+}
+
+@media(min-width: 768px) and (max-width:991px) {
+    .ruby-wrapper .hidden-md {
+        visibility:hidden;
+        display: none
+    }
+
+    div.ruby-wrapper {
+
+    }
+ 
+
+    div.ruby-grid > div.ruby-row div.ruby-col-3-md {
+        width: 25%
+    }
+
+    div.ruby-grid > div.ruby-row div.ruby-col-4-md {
+        width: 33.33%
+    }
+
+    div.ruby-grid > div.ruby-row div.ruby-col-6-md {
+        width: 50%
+    }
+
+    div.ruby-grid > div.ruby-row div.ruby-col-12-md {
+        width: 100%
+    }
+
+    div.ruby-grid.ruby-grid-lined > div.ruby-row:after,div.ruby-grid.ruby-grid-lined > div.ruby-row > div[class^="ruby-col"]:after {
+        background: none
+    }
+
+    ul.ruby-menu > li.ruby-menu-mega-shop > div > ul > li > a {
+        padding: 20px 5px;
+        font-size: 12px;
+        font-stretch: condensed;
+        color: #666
+    }
+}
+
+ 
+          .ruby-menu-mega li a{
+         
+         line-height: 14px !important;
+         
+     }
