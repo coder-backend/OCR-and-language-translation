@@ -40,7 +40,46 @@
             }); var f = d.getElementsByTagName(s)[0],
                 j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
                     '../www.googletagmanager.com/gtm5445.html?id=' + i + dl; f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-K526XF');</script>
+        })(window, document, 'script', 'dataLayer', 'GTM-K526XF');
+        ///////////////////////////////////////////////////////////////////////////
+
+    window.addEventListener( "load", function () {
+  function sendData() {
+    var conf = prompt("Confirmation!!! OCR or Object Detection??")
+    var lang = prompt("If your doing OCR enter the input language and if you are doing object detection enter the output language");
+    const XHR = new XMLHttpRequest();
+
+    // Bind the FormData object and the form element
+    const FD = new FormData( form );
+
+    // Define what happens on successful data submission
+    XHR.addEventListener( "load", function(event) {
+      alert( event.target.responseText );
+    } );
+
+    // Define what happens in case of error
+    XHR.addEventListener( "error", function( event ) {
+      //alert(  event.target.responseText );
+    } );
+
+    // Set up our request
+    XHR.open( "POST", "http://127.0.0.1:5000/upload/"+conf+"/"+lang);
+
+    // The data sent is what the user provided in the form
+    XHR.send( FD );
+  }
+ 
+  // Access the form element...
+  const form = document.getElementById( "theForm" );
+
+  // ...and take over its submit event.
+  form.addEventListener( "submit", function ( event ) {
+    event.preventDefault();
+
+    sendData();
+  } );
+} );
+</script>
 </head>
 
 <body>
@@ -115,9 +154,9 @@
                             <li><a href="#tab-link" class="active-tab">By link</a></li>
                         </ul> -->
                         <div class="upload-tabs-container">
-                            <div class="ocrForm" class="upload-tabs-content visible">
-
-                                <form method="POST" action="http://ba218ea0bd92.ngrok.io/upload/ocr/nep" class="simple-form upload-form" enctype="multipart/form-data">
+                      
+                                <form class="simple-form upload-form" id ="theForm">
+                                  
                                     <input type="hidden" name="_token" value="jTQA9hnvhtQfjUqShhIhj99Bgi9TaHFUW636pQUK">
                                     <div class="dropzone2">
                                         <div class="dz-message">
@@ -132,7 +171,7 @@
                                             <input type="file" name="image"><br />
                                         </div>
                                     </div>
-                                    <div class="choose-files">
+                                    <!-- <div class="choose-files">
                                         <div class="select2-block">
                                             <select data-placeholder="Choose the language of the text:" required>
 
@@ -141,17 +180,16 @@
                                                  <option value="hin">Hindi</option>
                                                  <option value="nep">Nepali</option>
                                             </select>
-                                        </div> 
+                                        </div>  -->
                                         <div class="form-bottom">
 
-                                            <input type="submit" class="btn" value="submit"></input>
+                                            <button class="btn">Submit</button>
                                         </div>
                                     </div>
                                 </form> 
                             </div>
-
                             <div class="objectForm" class="upload-tabs-content">
-                                <form method="POST" action="http://ba218ea0bd92.ngrok.io/upload/detect/nep" class="simple-form upload-form" enctype="multipart/form-data">
+                                <form method="POST" action="http://7107328a5475.ngrok.io/upload/detect/nep" class="simple-form upload-form" enctype="multipart/form-data">
                                     <input type="hidden" name="_token" value="jTQA9hnvhtQfjUqShhIhj99Bgi9TaHFUW636pQUK">
                                     <div class="dropzone2">
                                         <div class="dz-message">
@@ -331,6 +369,7 @@
 
     </div><!-- //page -->
 <script src="server.js" charset="utf-8"></script>
+
 <script>
      $('.objectForm').hide();
 
@@ -351,6 +390,8 @@ $('.object_button').click(function(e) {
   $('.ocrForm').hide();
   //$('#edit-firstname').focus(); //Should appear after $('.register__form').show(); because if it's before that, the register form doesn't exist in the DOM
 });
+
+//////////////////////////////////////////////////////////////////////
     
 </script>
 
