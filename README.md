@@ -4,7 +4,7 @@
 
 # Watch full implementation [here](https://www.youtube.com/watch?v=xwLzUg2_SFk&ab_channel=TowardsAI)
 
-![GIf](https://j.gifs.com/XL89nV.gif)
+![GIf](https://j.gifs.com/XL89nV.gif)  ![Object](https://j.gifs.com/vlGpDn.gif)
 
 
 
