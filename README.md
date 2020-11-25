@@ -4,6 +4,8 @@
 
 # Watch full implementation [here](https://www.youtube.com/watch?v=xwLzUg2_SFk&ab_channel=TowardsAI)
 
+![GIf](https://j.gifs.com/XL89nV.gif)
+
 [![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://www.youtube.com/watch?v=xwLzUg2_SFk&ab_channel=TowardsAI)
 
 # We have hosted our project on GitHub, Since we used our own laptop as a server you can only enjoy doing Object Detection, OCR, Language Translation when we are online.
