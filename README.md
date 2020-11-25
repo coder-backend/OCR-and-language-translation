@@ -4,7 +4,7 @@
 
 # Watch full implementation [here](https://www.youtube.com/watch?v=xwLzUg2_SFk&ab_channel=TowardsAI)
 
-# We have hosted our project on GitHub, Since we had use our own laptop as a server you can only enjoy doing Object Detection, OCR, Language Translation when we are online.
+# We have hosted our project on GitHub, Since we used our own laptop as a server you can only enjoy doing Object Detection, OCR, Language Translation when we are online.
 # But still you can check out how it looks by clicking [here](https://ashish807.github.io/OCR-and-language-translation/)
 
 We have uploaded all the required documents of this project in [Documents](Documents/) folder. We have uploaded [Project Summary](Documents/Project_Summary.pdf), [Write Up](Documents/WriteUp.pdf), [UML Class Diagram](Documents/Class_diagram.pdf) and many more in [Documents](Documents/) folder, please feel free to access them
