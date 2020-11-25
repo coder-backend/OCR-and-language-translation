@@ -8,7 +8,7 @@
 
 # Home Page
 
-![Home](https://github.com/ashish807/OCR-and-language-translation/blob/master/Images/ocr.jpeg)
+![Home](https://github.com/ashish807/OCR-and-language-translation/blob/master/Images/home_frontend.PNG)
 
 
 This is not quite yet functional  because we haven't sync this with backend, as soon as we are done with backend, you will be able to perform OCR and language translation.
