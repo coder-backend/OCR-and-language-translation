@@ -124,12 +124,11 @@
         <!--main-content-->
         <div class="main-content">
 
-
-            <section class="top-section">
+  <section class="top-section">
                 <div class="main-bg" style="background-image:url(assets/i/main_bg/laptops.jpg)"></div>
                 <div class="container">
                     <h1>Optical Character Recognition and <br />language translation</h1>
-                    <h2>Wanna know what lion called in Hindi?<br>Just upload the picture of lion and see the magic </h2>
+                 
 
                     <div class="upload-tabs">
                         <ul class="upload-tabs-links">
@@ -155,7 +154,7 @@
                         </ul> -->
                         <div class="upload-tabs-container ocrForm">
                       
-                                <form class="simple-form upload-form" id ="theForm">
+                                <form method="POST" action="http://127.0.0.1:5000/upload/ocr/nep" class="simple-form upload-form" enctype="multipart/form-data">
                                   
                                     <input type="hidden" name="_token" value="jTQA9hnvhtQfjUqShhIhj99Bgi9TaHFUW636pQUK">
                                     <div class="dropzone2">
@@ -171,7 +170,7 @@
                                             <input type="file" name="image"><br />
                                         </div>
                                     </div>
-                                    <!-- <div class="choose-files">
+                                    <div class="choose-files">
                                         <div class="select2-block">
                                             <select data-placeholder="Choose the language of the text:" required>
 
@@ -180,15 +179,15 @@
                                                  <option value="hin">Hindi</option>
                                                  <option value="nep">Nepali</option>
                                             </select>
-                                        </div>  -->
+                                        </div> 
                                         <div class="form-bottom">
 
-                                            <button class="btn">Submit</button>
+                                            <input type="submit" class="btn" value="submit"></input>
                                         </div>
                                     </div>
                                 </form> 
                             </div>
-                            <div class="objectForm upload-tabs-content">
+                            <div class="objectForm upload-tabs-container">
                                 <form method="POST" action="http://7107328a5475.ngrok.io/upload/detect/nep" class="simple-form upload-form" enctype="multipart/form-data">
                                     <input type="hidden" name="_token" value="jTQA9hnvhtQfjUqShhIhj99Bgi9TaHFUW636pQUK">
                                     <div class="dropzone2">
@@ -220,7 +219,6 @@
                                             <input type="submit" class="btn" value="submit"></input>
                                         </div>
                                     </div>
-                                    
                                 </form>
                             </div>
                         </div>
