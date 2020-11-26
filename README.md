@@ -4,7 +4,7 @@
 
 # Watch full implementation [here](https://www.youtube.com/watch?v=xwLzUg2_SFk&ab_channel=TowardsAI)
 
-![GIf](https://j.gifs.com/XL89nV.gif)  ![Object](https://j.gifs.com/vlGpDn.gif)
+![GIf](https://j.gifs.com/XL89nV.gif) 
 
 
 
@@ -25,9 +25,11 @@ Suppose you are planning to visit some place or say country where people speak d
 
 # What else?
 
-Now lets suppose you are in some random countries where people speak some random languages, and say you want to know what does motorcycle called in their language, the cool way to do this is just click the picture of motorcycle and know what does that called in any random languages.
+Now lets suppose you are in some random countries where people speak some random languages, and say you want to know what does bird called in their language, the cool way to do this is just click the picture of bird and know what does that called in any random languages.
 
 So main thing is, you can detect the object and translate that object name in any prefered language
+
+ ![Object](https://j.gifs.com/vlGpDn.gif)
 
 # This Project is divided into 7 sections, access them accordingly 
 
