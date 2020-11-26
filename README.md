@@ -1,5 +1,13 @@
 # OCR-and-language-translation
 
+We have uploaded all the required documents of this project for Software Engineering  in [Software Engineering Required Documents](https://github.com/ashish807/OCR-and-language-translation/tree/master/Software%20Engineering%20Required%20Documents)
+
+If you're having trouble in fetching the documents then please [click here](https://drive.google.com/drive/folders/1tKk6jZ-K9PmyAHa8lj9Tq65ICirgrGAY?usp=sharing).
+
+Presentation of the project for [Sotware Engineering](https://docs.google.com/presentation/d/10PsWhRhRcoELcRHUQTftivPfZYGcVb-MEV02nuQ5XaY/edit#slide=id.g541cc04270_4_931) 
+
+Presentation of project for [Web Tech](https://docs.google.com/presentation/d/1Pv6L9VkcGXF9A1TdVO3CaWWbnXQ-X_XpH-KBaeDsN9M/edit#slide=id.g541cc04270_4_0)
+
 # For Mobile App Download APK file from this [link](https://drive.google.com/drive/folders/1qvyiy0-t72qvkly3he0Jh3SYG1-AEIOc?usp=sharing)
 
 # Watch full implementation [here](https://www.youtube.com/watch?v=xwLzUg2_SFk&ab_channel=TowardsAI)
@@ -11,9 +19,7 @@
 # We have hosted our project on GitHub, Since we used our own laptop as a server you can only enjoy doing Object Detection, OCR, Language Translation when we are online.
 # But still you can check out how it looks by clicking [here](https://ashish807.github.io/OCR-and-language-translation/)
 
-We have uploaded all the required documents of this project in [Documents](Documents/) folder. We have uploaded [Project Summary](Documents/Project_Summary.pdf), [Write Up](Documents/WriteUp.pdf), [UML Class Diagram](Documents/Class_diagram.pdf) and many more in [Documents](Documents/) folder, please feel free to access them
 
-If you're having trouble in fetching the documents then please [click here](https://drive.google.com/drive/folders/1tKk6jZ-K9PmyAHa8lj9Tq65ICirgrGAY?usp=sharing).
 
 # The main aim of this project is to help people from different ethnic groups communicate with each other.
 
