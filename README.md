@@ -8,7 +8,7 @@ Presentation of the project for [Sotware Engineering](https://docs.google.com/pr
 
 Presentation of project for [Web Tech](https://docs.google.com/presentation/d/1Pv6L9VkcGXF9A1TdVO3CaWWbnXQ-X_XpH-KBaeDsN9M/edit#slide=id.g541cc04270_4_0)
 
-# For Mobile App Download APK file from this [link](https://drive.google.com/drive/folders/1qvyiy0-t72qvkly3he0Jh3SYG1-AEIOc?usp=sharing)
+# Mobile App Download APK file from this [link](https://drive.google.com/drive/folders/1qvyiy0-t72qvkly3he0Jh3SYG1-AEIOc?usp=sharing)
 
 # Watch full implementation [here](https://www.youtube.com/watch?v=xwLzUg2_SFk&ab_channel=TowardsAI)
 
@@ -52,8 +52,6 @@ So main thing is, you can detect the object and translate that object name in an
 [6 Backend](https://github.com/ashish807/OCR-and-language-translation/tree/master/Backend)
 
 [7 Text to Speech](https://github.com/ashish807/OCR-and-language-translation/tree/master/Text_to_audio)
-
-# Please feel free to access any of these 7 section
 
 # Contact
 ashish.adhikari727@gmail.com
