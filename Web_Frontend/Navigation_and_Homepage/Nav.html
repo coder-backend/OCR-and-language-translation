@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Nav_Page</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-storage.js"></script>
+    <script type="text/javascript" src=../Profile_page/same.js></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<link rel="stylesheet" href="style2.css">
+</head>
+<body>
+	<div id="wrapper">
+	<div class ="content">
+	<ul>
+   	<li data-text="Profile"><a href="../Profile_page/profile.html">Profile</a></li>
+   	<li data-text="Optical Character Recognition"><a href="../OCR_page/ocr.html">OCR</a></li>
+   	<li data-text="Object Detection"><a href="../Object_detection_page/obj.html">Object Detection</a></li>
+   	<li data-text="Team"><a href="../Team/Team_Cards.html">Team</a></li>
+   	<li data-text="Signout"><a href="#" onclick="signOut()">Signout</a></li>
+   </ul>
+   </div>
+	<div id="snow_fall"></div>
+   </div>
+   <script>
+     var firebaseConfig = {
+    apiKey: "AIzaSyBQGzQWSYg6r6gvoFThzJsvrMiHE2v4ONY",
+    authDomain: "ocr-languagetranslation.firebaseapp.com",
+    projectId: "ocr-languagetranslation",
+    storageBucket: "ocr-languagetranslation.appspot.com",
+    messagingSenderId: "968531366311",
+    appId: "1:968531366311:web:400afa9cb9d548860e6682"
+    };
+  // Initialize Firebase
+   firebase.initializeApp(firebaseConfig);
+    </script>
+    <script type="text/javascript" src="../SignIn_Signup/fire.js"></script>
+	  <script type="text/javascript" src="particles.js"></script>
+	  <script type="text/javascript" src="app.js"></script>
+</body>
+</html>

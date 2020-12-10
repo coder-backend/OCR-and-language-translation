@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width"/>
+	<title>Object Detection</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <input type="file" name="" id="file" hidden/>
+     <div style="color:#2193b0;font-size:40px;">Object Detection</div><br>
+     <header>
+     <div class="nav-icon float-right" onclick="nextpage()">
+		<span></span>
+		<span></span>
+		<span></span>
+	 </div>
+	 </header>
+     <label for="file" id="selector">Select image</label><br>
+     <script src="file.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-storage.js"></script>
+     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+     <script>
+      var firebaseConfig = {
+    apiKey: "AIzaSyBQGzQWSYg6r6gvoFThzJsvrMiHE2v4ONY",
+    authDomain: "ocr-languagetranslation.firebaseapp.com",
+    projectId: "ocr-languagetranslation",
+    storageBucket: "ocr-languagetranslation.appspot.com",
+    messagingSenderId: "968531366311",
+    appId: "1:968531366311:web:400afa9cb9d548860e6682"
+    };
+  // Initialize Firebase
+   firebase.initializeApp(firebaseConfig);
+   </script>
+</body>
+</html>

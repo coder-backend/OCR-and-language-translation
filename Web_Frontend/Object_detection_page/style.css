@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+*{
+ margin: 0;
+ box-sizing: border-box;
+ transition: all 0.35s linear;
+ font-family: 'Poppins',sans-serif;
+}
+body{
+	height: 70vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #242424;
+}
+label{
+	padding:16px 48px;
+	border:3px solid #ffc872;
+	border-radius:48px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: bold;
+	color: #ffc872;
+}
+label:hover{
+	transform: scale(1.04);
+}
+label.active{
+	background-color: #ffc872;
+	color:#242424;
+}
+label span{
+	font-weight:normal;
+}
+header {
+    position: fixed;
+    padding: 30px;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+
+.nav-icon {
+    width: 23px;
+    height: 18px;
+    position: relative;    
+    transform: rotate(0deg);     
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    margin-top: 7px;
+}
+
+.nav-icon span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    opacity: 1;    
+    transform: rotate(0deg);   
+    transition: .25s ease-in-out;
+}
+
+.nav-icon span:nth-child(1) {
+    top: 0px;     
+    transform-origin: left center;
+}
+
+.nav-icon span:nth-child(2) {
+    top: 6px;    
+    transform-origin: left center;
+}
+
+.nav-icon span:nth-child(3) {
+    top: 12px;     
+    transform-origin: left center;
+    width: 60%;
+    right: 0 !important;
+}
+
+.nav-icon:hover span:nth-child(3) {
+    width: 100%;
+}
+

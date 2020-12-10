@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width"/>
+	<title>OCR</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <input type="file" name="" id="file" hidden/>
+     <div style="color:#2193b0;font-size:40px">Optical Character Recognition</div><br>
+     <label for="file" id="selector">Select image</label><br>
+     <div class="dropdown" >
+     	<button>Languages Dropdown</button>
+     	<ul>
+     		<li><a href="#" >Punjabi</a></li>
+     		<li><a href="#" >Hindi</a></li>
+     		<li><a href="#" >Nepali</a></li>
+     	</ul>
+     </div>
+     <header>
+     <div class="nav-icon float-right" onclick="nextpage()">
+          <span></span>
+          <span></span>
+          <span></span>
+     </div>
+     </header>
+     <script src="file.js"></script>
+     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+     <script type="text/javascript">
+     	$(document).ready(function(){
+     		$('button').click(function(){
+     			$('ul').toggleClass('active')
+     		})
+     	})
+     </script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-storage.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+     <script>
+         var firebaseConfig = {
+    apiKey: "AIzaSyBQGzQWSYg6r6gvoFThzJsvrMiHE2v4ONY",
+    authDomain: "ocr-languagetranslation.firebaseapp.com",
+    projectId: "ocr-languagetranslation",
+    storageBucket: "ocr-languagetranslation.appspot.com",
+    messagingSenderId: "968531366311",
+    appId: "1:968531366311:web:400afa9cb9d548860e6682"
+    };
+  // Initialize Firebase
+   firebase.initializeApp(firebaseConfig);
+    </script>
+</body>
+</html>

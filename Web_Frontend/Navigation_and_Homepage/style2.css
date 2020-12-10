@@ -1,0 +1,17 @@
+#wrapper{
+  position: relative;
+  width:80px;
+  height: 200px;
+}
+.content{
+  position: relative;
+  z-index: 100;
+}
+#snow_fall{
+  width: 100%;
+  height:100vh;
+  top:0;
+  left: 0;
+  z-index: -100;
+  position:fixed;
+}

@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+*{
+ margin: 0;
+ box-sizing: border-box;
+ transition: all 0.35s linear;
+ font-family: 'Poppins',sans-serif;
+}
+body{
+	height: 70vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #242424;
+}
+label{
+	padding:16px 48px;
+	border:3px solid #ffc872;
+	border-radius:48px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: bold;
+	color: #ffc872;
+}
+label:hover{
+	transform: scale(1.04);
+}
+label.active{
+	background-color: #ffc872;
+	color:#242424;
+}
+label span{
+	font-weight:normal;
+}
+button{
+	width: 400px;
+	height: 60px;
+	font-size:24px;
+	background:#0d7ad0;
+	border:none;
+	box-shadow:none;
+	outline: none;
+	cursor: pointer;
+	color:#fff; 
+}
+ul{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	background: #ccc;
+	transform-origin: top;
+	transform:perspective(1000px) rotateX(-90deg);
+	transition: 0.5s;
+}
+ul.active{
+	transform:perspective(1000px) rotateX(0deg);
+}
+ul li{
+	list-style: none;
+}
+ul li a
+{
+	display: block;
+	padding: 10px;
+	text-align: center;
+	text-decoration: none;
+	background: #262626;
+	color: #fff;
+	border-bottom:1px solid rgba(0,0,0,0.2);
+    transition:0.5s;}
+ul li a:hover{
+	background: #0d7ad0;
+}
+header {
+    position: fixed;
+    padding: 30px;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+.nav-icon {
+    width: 23px;
+    height: 18px;
+    position: relative;    
+    transform: rotate(0deg);     
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    margin-top: 7px;
+}
+
+.nav-icon span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    opacity: 1;    
+    transform: rotate(0deg);   
+    transition: .25s ease-in-out;
+}
+
+.nav-icon span:nth-child(1) {
+    top: 0px;     
+    transform-origin: left center;
+}
+
+.nav-icon span:nth-child(2) {
+    top: 6px;    
+    transform-origin: left center;
+}
+
+.nav-icon span:nth-child(3) {
+    top: 12px;     
+    transform-origin: left center;
+    width: 60%;
+    right: 0 !important;
+}
+
+.nav-icon:hover span:nth-child(3) {
+    width: 100%;
+}

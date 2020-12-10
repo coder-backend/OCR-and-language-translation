@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+*{
+	box-sizing: border-box;
+}
+body{
+	background-color: #6756a9;
+	font-family: Montserrat,sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	min-height: 100vh;
+	margin: 0;
+}
+h3{ 
+	margin: 10px 0;
+}
+h6{
+	margin:5px 0;
+	text-transform: uppercase;
+}
+p{
+	font-size: 14px;
+	line-height: 21px;
+}
+.card-container{
+	background-color: #231E39;
+	border-radius: 5px;
+	box-shadow: 10px 10px 20px -10px rgba(0,0,0,0.75);
+	color: #B3B8CD;
+	padding-top: 30px;
+    position: relative;
+    width: 350px;
+    max-width: 100%;
+    text-align: center;
+    border-color: white;
+    height: 450px;
+}
+.card-container .round{
+  border:1px solid #03BFCB;
+  width:250px;
+  height:250px;
+  border-radius: 50%;
+  padding:7px;
+}
+button.primary{
+	background-color: #03BFCB;
+	border:1px solid #03BFCB;
+	border-radius: 3px;
+	color: white;
+	font-family: Montserrat,sans-serif;
+	font-weight: 500;
+	padding:10px 25px;
+}
+button.primary.ghost{
+	background-color: transparent;
+	color: white;
+}
+.skills{
+	background-color: #1F1A36;
+	text-align: left;
+	padding:15px;
+	margin-top:30px;
+}
+.skills ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.skills ul li{
+	border:1px solid white;
+	border-radius: 2px;
+	display: inline-block;
+	font-size: 14px;
+	margin: 0 7px 7px 0;
+	padding:7px;
+	color:white;
+}
+#upfile1{
+  cursor:pointer;
+  height:20px;
+  width:20px;
+  opacity:0.5
+}
+#upfile1:hover{
+  opacity:1;
+  height:40px;
+  width: 40px;
+}
+header {
+    position: fixed;
+    padding: 30px;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+
+.nav-icon {
+    width: 23px;
+    height: 18px;
+    position: relative;    
+    transform: rotate(0deg);     
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    margin-top: 7px;
+}
+
+.nav-icon span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    opacity: 1;    
+    transform: rotate(0deg);   
+    transition: .25s ease-in-out;
+}
+
+.nav-icon span:nth-child(1) {
+    top: 0px;     
+    transform-origin: left center;
+}
+
+.nav-icon span:nth-child(2) {
+    top: 6px;    
+    transform-origin: left center;
+}
+
+.nav-icon span:nth-child(3) {
+    top: 12px;     
+    transform-origin: left center;
+    width: 60%;
+    right: 0 !important;
+}
+
+.nav-icon:hover span:nth-child(3) {
+    width: 100%;
+}
