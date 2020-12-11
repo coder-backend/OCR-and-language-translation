@@ -17,7 +17,7 @@ Presentation of project for [Web Tech](https://docs.google.com/presentation/d/1P
 
 
 # We have hosted our project on GitHub, Since we used our own laptop as a server you can only enjoy doing Object Detection, OCR, Language Translation when we are online.
-# But still you can check out how it looks by clicking [here](https://ashish807.github.io/OCR-and-language-translation/)
+# But still you can check out how it looks by clicking [here](https://ashish807.github.io/MinorProjectHost/)
 
 
 
