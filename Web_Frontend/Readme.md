@@ -1,4 +1,4 @@
-#**Updated Web Application Frontend For the Minor Project**.
+#**Updated Web Application Frontend For the Minor Project<h1>**.
 
 
 ##**Sign In page**
