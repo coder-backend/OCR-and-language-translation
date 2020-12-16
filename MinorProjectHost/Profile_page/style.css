@@ -81,14 +81,12 @@ button.primary.ghost{
 }
 #upfile1{
   cursor:pointer;
-  height:20px;
-  width:20px;
-  opacity:0.5
+  color:#d7fffe
+
 }
 #upfile1:hover{
-  opacity:1;
-  height:40px;
-  width: 40px;
+    color: blueviolet;
+
 }
 header {
     position: fixed;
