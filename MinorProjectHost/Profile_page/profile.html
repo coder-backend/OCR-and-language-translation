@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Profile Page</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://kit.fontawesome.com/dd1b8150ee.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="card-container">
+        <div id="imgkeliye">
+    	       <img class="round" id="myimg" alt="user">
+        </div>
+        <h1 style="color:#d7fffe">
+            <i class="fab fa-instagram"></i>
+        </h1>
+        
+        <div id="profileSection">
+    	  <h3 id="userPfFullName"></h3>
+    	  <h6 id="userplace"></h6>
+    	  <p  id="usercollege"></p>
+    	  <div class="buttons">
+    	    <button class="primary" onclick="showEditProfileForm()">Edit Profile</button>
+    	  </div>
+        </div>
+        <div id="editProfileForm">
+            <div class="form-group">
+            <label for="userFullName">Name<span class="text-danger ml-1">*</span></label>
+            <input type="text" class="form-control" id="userFullName" onblur="checkUserFullName()" placeholder="Fullname"><br>
+            </div>
+            <div class="form-group">
+            <label for="userplc">Enter Place<span class="text-danger ml-1">*</span></label>
+            <input type="text" class="form-control" id="userplc" placeholder="Fullname">
+            </div><br>
+            <div class="form-group">
+            <label for="userclg">Enter College Name<span class="text-danger ml-1">*</span></label>
+            <input type="text" class="form-control" id="userclg" placeholder="Fullname">
+            </div><br>
+       <button type="button" class="btn btn-outline-primary btn-block text-uppercase mb-3" onclick="saveProfile()">Update</button>
+       <button type="button" class="btn btn-outline-secondary btn-block text-uppercase" onclick="hideEditProfileForm()">Cancel</button>
+       </div>       	
+    </div>
+    <header>
+    <div class="nav-icon float-right" onclick="nextpage()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    </header>
+    <script>
+        function nextpage(){
+        window.location.replace("../Navigation_and_Homepage/Nav.html");
+        }
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-storage.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script id="Mainscript">
+    var imgname,imgurl;
+    var files=[];
+    var reader;
+
+    var firebaseConfig = {
+    apiKey: "AIzaSyBQGzQWSYg6r6gvoFThzJsvrMiHE2v4ONY",
+    authDomain: "ocr-languagetranslation.firebaseapp.com",
+    projectId: "ocr-languagetranslation",
+    storageBucket: "ocr-languagetranslation.appspot.com",
+    messagingSenderId: "968531366311",
+    appId: "1:968531366311:web:400afa9cb9d548860e6682"
+    };
+  // Initialize Firebase
+   firebase.initializeApp(firebaseConfig);
+    let uid;
+    img=document.getElementById('myimg');
+   	firebase.auth().onAuthStateChanged((user)=>{
+    if (user) {
+        let user = firebase.auth().currentUser;
+        if(user != null){
+            uid = user.uid;
+        }
+        let firebaseRefKey = firebase.database().ref().child(uid);
+        firebaseRefKey.on('value', (dataSnapShot)=>{
+            document.getElementById("userPfFullName").innerHTML = dataSnapShot.val().userFullName;
+            document.getElementById("userplace").innerHTML = dataSnapShot.val().userplace;
+            document.getElementById("usercollege").innerHTML = dataSnapShot.val().usercollege;
+        })
+      firebase.storage().ref('users/'+user.uid+'/profile.jpg').getDownloadURL().then(imgurl =>{
+        img.src=imgurl;
+      })
+     } else {
+    }
+  });
+   
+   let file={};
+   document.getElementById("upfile1").onclick=function(e){
+    var input=document.createElement('input');
+    input.type='file';
+    input.onchange = e =>{
+      file=e.target.files[0];
+        firebase.storage().ref('users/'+uid+'/profile.jpg').put(file).then(function(){
+         swal({
+                type: 'successfull',
+                title: 'Update Successfull',
+                text: 'Profile image updated !! Please reload the page', 
+            }).then((value) => {
+                setTimeout(function(){
+                }, 500)
+            });
+        }).catch((error) => {
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                swal({
+                    type: 'error',
+                    title: 'Error',
+                    text: "Error while uploading image",
+                })
+            });
+       }
+       input.click(); 
+    }
+
+// xxxxxxxxxx Show edit profile form with detail xxxxxxxxxx
+function showEditProfileForm(){
+    $('#profileSection').hide();
+    $('#editProfileForm').show();
+    var userPfFullName = document.getElementById("userPfFullName").innerHTML;
+    var userplace = document.getElementById("userplace").innerHTML;
+    var usercollege = document.getElementById("usercollege").innerHTML;
+    document.getElementById("userFullName").value = userPfFullName; 
+    document.getElementById("userplc").value = userplace; 
+    document.getElementById("userclg").value = usercollege; 
+}
+// xxxxxxxxxx Hide edit profile form xxxxxxxxxx
+function hideEditProfileForm(){
+     $('#editProfileForm').hide();
+     $('#profileSection').show();
+}
+// xxxxxxxxxx Save profile and update database xxxxxxxxxx
+function saveProfile(){
+    let userFullName = document.getElementById("userFullName").value 
+    let userplace = document.getElementById("userplc").value 
+    let userclg = document.getElementById("userclg").value
+    var userFullNameFormate = /^([A-Za-z.\s_-])/; 
+    var checkUserFullNameValid = userFullName.match(userFullNameFormate);
+    if(checkUserFullNameValid == null){
+        return checkUserFullName();
+    }else{
+        var firebaseRef = firebase.database().ref();
+        var userData = {
+            userFullName: userFullName,
+            userplace: userplace,
+            usercollege: userclg,
+        }
+        firebaseRef.child(uid).set(userData);
+        swal({
+            type: 'successfull',
+            title: 'Update successfull',
+            text: 'Profile information updated.', 
+        }).then((value) => {
+            setTimeout(function(){
+                document.getElementById("profileSection").style.display = "block";
+                document.getElementById("editProfileForm").style.display = "none";
+            }, 500)
+        });
+    }
+}
+
+</script>
+</body>
+</html>
