@@ -70,9 +70,19 @@ class _SignUpState extends State<SignUp> {
                   builder: (context) => HomePage(
                         uid: user.uid,
                       )));
+        } else {
+          Scaffold.of(context)
+              .showSnackBar(SnackBar(content: Text('Error Ocurred')));
+          setState(() {
+            _isLoading = false;
+          });
         }
       } catch (e) {
-        print(e.message);
+        Scaffold.of(context)
+            .showSnackBar(SnackBar(content: Text('${e.message}')));
+        setState(() {
+          _isLoading = false;
+        });
       }
     }
   }

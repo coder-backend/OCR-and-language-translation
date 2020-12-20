@@ -9,11 +9,5 @@ class UserData {
   final String name;
   final String phoneNo;
   final String gender;
-
-  UserData({
-    this.uid,
-    this.name,
-    this.phoneNo,
-    this.gender,
-  });
+  UserData({this.uid, this.name, this.phoneNo, this.gender});
 }

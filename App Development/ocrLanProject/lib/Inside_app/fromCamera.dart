@@ -1,5 +1,7 @@
 import 'dart:io';
 
+import 'package:ocrLanProject/Inside_app/connection.dart';
+
 import './camera_or_gallery.dart';
 import './ocr.dart';
 import './translator.dart';
@@ -14,11 +16,15 @@ import 'package:flutter_speed_dial/flutter_speed_dial.dart';
 const String ssd = "SSD MobileNet";
 
 class Camera extends StatefulWidget {
+  final String uid;
+  Camera({this.uid});
   @override
-  _CameraState createState() => _CameraState();
+  _CameraState createState() => _CameraState(uid: uid);
 }
 
 class _CameraState extends State<Camera> {
+  final String uid;
+  _CameraState({this.uid});
   String objectText = "Nothing";
 
   String _model = ssd;
@@ -56,12 +62,23 @@ class _CameraState extends State<Camera> {
   }
 
   language() {
-    Navigator.push(
-        context,
-        MaterialPageRoute(
-            builder: (context) => Translator(
-                  text: objectText,
-                )));
+    // Navigator.push(
+    //     context,
+    //     MaterialPageRoute(
+    //         builder: (context) =>
+    //             Translator(text: objectText, uid: uid, filePath: _image.path)));
+    showModalBottomSheet(
+        context: context,
+        builder: (context) {
+          return SingleChildScrollView(
+            child: Container(
+              height: 1000,
+              padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 60.0),
+              child:
+                  Connection(uid: uid, text: objectText, filePath: _image.path),
+            ),
+          );
+        });
   }
 
   selectFromImagePicker() async {
@@ -205,13 +222,13 @@ class _CameraState extends State<Camera> {
           "Object Detection",
           style: TextStyle(color: Colors.white),
         ),
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.lightBlue,
         centerTitle: true,
         actions: <Widget>[
           FlatButton.icon(
               onPressed: () {
-                Navigator.push(
-                    context, MaterialPageRoute(builder: (context) => Camera()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => Camera(uid: uid)));
               },
               icon: Icon(Icons.refresh),
               label: Text('Refresh'))
@@ -220,8 +237,8 @@ class _CameraState extends State<Camera> {
         leading: IconButton(
             icon: Icon(Icons.arrow_back_ios),
             onPressed: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Options()));
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => Options(uid: uid)));
             }),
       ),
       floatingActionButton: SpeedDial(
@@ -263,16 +280,6 @@ class _CameraState extends State<Camera> {
             labelStyle: TextStyle(fontSize: 18.0),
             onTap: () {
               language();
-            },
-          ),
-          SpeedDialChild(
-            child: Icon(Icons.change_history),
-            backgroundColor: Colors.green,
-            label: 'OCR',
-            labelStyle: TextStyle(fontSize: 18.0),
-            onTap: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (ctx) => OCR()));
             },
           ),
         ],

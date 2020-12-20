@@ -3,15 +3,20 @@ import './fromGallery.dart';
 import './home.dart';
 
 import 'package:flutter/material.dart';
+import 'package:particles_flutter/particles_flutter.dart';
 
 class Options extends StatefulWidget {
+  final String uid;
+  Options({this.uid});
   @override
   OptionsState createState() {
-    return new OptionsState();
+    return new OptionsState(uid: uid);
   }
 }
 
 class OptionsState extends State<Options> {
+  final String uid;
+  OptionsState({this.uid});
   var _alignment = Alignment.bottomCenter;
 
   @override
@@ -25,14 +30,14 @@ class OptionsState extends State<Options> {
           "Object Detection",
           style: TextStyle(color: Colors.white),
         ),
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: Colors.blue[200],
         centerTitle: true,
         automaticallyImplyLeading: true,
         leading: IconButton(
             icon: Icon(Icons.arrow_back_ios),
             onPressed: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => HomePage()));
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => HomePage(uid: uid)));
             }),
       ),
       body: Container(
@@ -42,7 +47,7 @@ class OptionsState extends State<Options> {
             : 775.0,
         decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage("assets/img/ob.jpeg"), fit: BoxFit.cover),
+              image: AssetImage("assets/img/ob.jpg"), fit: BoxFit.cover),
         ),
         child: Container(
           padding: EdgeInsets.all(30),
@@ -109,10 +114,11 @@ class OptionsState extends State<Options> {
 
   selectFromGallery(context) {
     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => TfliteHome()));
+        context, MaterialPageRoute(builder: (context) => TfliteHome(uid: uid)));
   }
 
   selectfromCamera(context) {
-    Navigator.push(context, MaterialPageRoute(builder: (context) => Camera()));
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => Camera(uid: uid)));
   }
 }

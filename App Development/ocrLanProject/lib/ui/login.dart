@@ -1,7 +1,3 @@
-//import 'package:app_dev/Inside_app/home.dart';
-//import 'package:app_dev/helper/functions.dart';
-import './sorry.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -321,20 +317,25 @@ class _LoginState extends State<Login> {
           setState(() {
             _isLoading = false;
           });
+          Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => HomePage(
+                        uid: id,
+                      )));
+        } else {
+          Scaffold.of(context)
+              .showSnackBar(SnackBar(content: Text('Error Ocurred')));
+          setState(() {
+            _isLoading = false;
+          });
         }
       } catch (e) {
-        print(e.message);
-      }
-      if (trueInput == true) {
-        Navigator.pushReplacement(
-            context,
-            MaterialPageRoute(
-                builder: (context) => HomePage(
-                      uid: id,
-                    )));
-      } else {
-        Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => Sorry()));
+        Scaffold.of(context)
+            .showSnackBar(SnackBar(content: Text('${e.message}')));
+        setState(() {
+          _isLoading = false;
+        });
       }
     }
   }

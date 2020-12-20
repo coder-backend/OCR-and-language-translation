@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:ocrLanProject/Databases/urlData.dart';
 import './user.dart';
 
 class DatabaseService {
@@ -31,5 +32,35 @@ class DatabaseService {
 
   Stream<UserData> get userData {
     return userCollection.doc(uid).snapshots().map(_userDataFromSnapshot);
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+class DatabaseServiceURL {
+  final String uid;
+  DatabaseServiceURL({this.uid});
+
+  // user reference
+  final CollectionReference userCollectionURL =
+      FirebaseFirestore.instance.collection('URL');
+
+  Future updateUserDataURL(String url) async {
+    //print("user id: ${uid}");
+    return await userCollectionURL.doc(uid).set({
+      'url': url,
+    });
+  }
+
+  // student list from snapshot
+
+  UserDataURL _userDataURLFromSnapshot(DocumentSnapshot snapshot) {
+    return UserDataURL(
+      uid: uid,
+      url: snapshot.data()["url"],
+    );
+  }
+
+  Stream<UserDataURL> get userDataURL {
+    return userCollectionURL.doc(uid).snapshots().map(_userDataURLFromSnapshot);
   }
 }

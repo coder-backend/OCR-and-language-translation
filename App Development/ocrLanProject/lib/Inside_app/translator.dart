@@ -2,44 +2,65 @@ import './translatorOnly.dart';
 import 'package:flutter/material.dart';
 import 'package:translator/translator.dart';
 import '../style/theme.dart' as Theme;
+import 'dart:io';
+import 'package:path/path.dart';
+import 'package:dio/dio.dart';
 
 class Translator extends StatefulWidget {
-  String text;
-  Translator({this.text});
+  var filePath;
+  String text, urlLink;
+  final String uid;
+  Translator({this.text, this.uid, this.filePath, this.urlLink});
   @override
-  _TranslatorState createState() => _TranslatorState(text: text);
+  _TranslatorState createState() => _TranslatorState(
+      text: text, uid: uid, filePath: filePath, urlLink: urlLink);
 }
 
 class _TranslatorState extends State<Translator> {
+  var filePath;
+  final String uid, urlLink;
   String outputLanguage = "English";
   String languageout = "English";
-  Translation output;
+  var output;
   String text;
   final List<String> lang = ["Nepali", "Hindi", "Punjabi"];
-  _TranslatorState({this.text});
+  _TranslatorState({this.text, this.uid, this.filePath, this.urlLink});
 
   language() async {
     if (languageout == "Nepali") {
       setState(() {
-        outputLanguage = "ne";
+        outputLanguage = "nep";
       });
     }
     if (languageout == "Hindi") {
       setState(() {
-        outputLanguage = "hi";
+        outputLanguage = "hin";
       });
     }
     if (languageout == "Punjabi") {
       setState(() {
-        outputLanguage = "pa";
+        outputLanguage = "pan";
       });
     }
-    final translator = GoogleTranslator();
-    var translation =
-        await translator.translate(text, from: 'en', to: outputLanguage);
-    setState(() {
-      output = translation;
-    });
+    try {
+      FormData formData =
+          FormData.fromMap({"image": await MultipartFile.fromFile(filePath)});
+
+      Response response = await Dio()
+          .post(urlLink + "upload/detect/" + outputLanguage, data: formData);
+      print("File upload response: $response");
+
+      // Show the incoming message in snakbar
+
+      setState(() {
+        output = response;
+        //_isLoading =true;
+      });
+
+      //_showSnakBarMsg(response.data['message']);
+    } catch (e) {
+      print("Exception Caught: $e");
+    }
   }
 
   @override
@@ -51,15 +72,6 @@ class _TranslatorState extends State<Translator> {
           style: TextStyle(color: Colors.white),
         ),
         backgroundColor: Colors.blueAccent,
-        actions: <Widget>[
-          FlatButton.icon(
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => TranslatorOnly()));
-              },
-              icon: Icon(Icons.g_translate),
-              label: Text(''))
-        ],
       ),
       body: Container(
         padding: EdgeInsets.all(20),

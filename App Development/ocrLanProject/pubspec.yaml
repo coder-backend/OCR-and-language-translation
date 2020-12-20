@@ -27,6 +27,7 @@ dependencies:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
+  http:
   cupertino_icons: ^1.0.0
   tflite: ^1.1.1
   image_picker: ^0.6.7+12
@@ -44,6 +45,8 @@ dependencies:
   cached_network_image: ^2.3.3
   shared_preferences: ^0.5.12+2
   rxdart:
+  dio: ^3.0.10
+  particles_flutter: "^0.1.1"
 
 
 dev_dependencies:
@@ -65,7 +68,7 @@ flutter:
   assets:
     - assets/img/
     - assets/
-    - assets/tessdata/
+ 
     - assets/tflite/
   # assets:
   #   - images/a_dot_burr.jpeg

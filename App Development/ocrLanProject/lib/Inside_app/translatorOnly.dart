@@ -7,11 +7,16 @@ import '../style/theme.dart' as Theme;
 import 'camera_or_gallery.dart';
 
 class TranslatorOnly extends StatefulWidget {
+  final String uid;
+  TranslatorOnly({this.uid});
   @override
-  _TranslatorOnlyState createState() => _TranslatorOnlyState();
+  _TranslatorOnlyState createState() => _TranslatorOnlyState(uid: uid);
 }
 
 class _TranslatorOnlyState extends State<TranslatorOnly> {
+  final String uid;
+  _TranslatorOnlyState({this.uid});
+
   String outputLanguage = "English";
   String inputLanguage = "English";
   String languagein = "English";
@@ -126,8 +131,10 @@ class _TranslatorOnlyState extends State<TranslatorOnly> {
         actions: <Widget>[
           FlatButton.icon(
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (ctx) => TranslatorOnly()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (ctx) => TranslatorOnly(uid: uid)));
               },
               icon: Icon(Icons.refresh),
               label: Text(''))
@@ -136,8 +143,8 @@ class _TranslatorOnlyState extends State<TranslatorOnly> {
         leading: IconButton(
             icon: Icon(Icons.arrow_back_ios),
             onPressed: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => HomePage()));
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => HomePage(uid: uid)));
             }),
       ),
       body: Container(

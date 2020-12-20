@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter_speed_dial/flutter_speed_dial.dart';
+import 'package:ocrLanProject/Inside_app/connection.dart';
 
 import './camera_or_gallery.dart';
 import 'package:flutter/material.dart';
@@ -14,11 +15,16 @@ import './translator.dart';
 const String ssd = "SSD MobileNet";
 
 class TfliteHome extends StatefulWidget {
+  final String uid;
+  TfliteHome({this.uid});
   @override
-  _TfliteHomeState createState() => _TfliteHomeState();
+  _TfliteHomeState createState() => _TfliteHomeState(uid: uid);
 }
 
 class _TfliteHomeState extends State<TfliteHome> {
+  final String uid;
+
+  _TfliteHomeState({this.uid});
   String _model = ssd;
   File _image;
   var errorImage;
@@ -203,13 +209,15 @@ class _TfliteHomeState extends State<TfliteHome> {
           "Object Detection",
           style: TextStyle(color: Colors.white),
         ),
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.lightBlue,
         centerTitle: true,
         actions: <Widget>[
           FlatButton.icon(
               onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => TfliteHome()));
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => TfliteHome(uid: uid)));
               },
               icon: Icon(Icons.refresh),
               label: Text('Refresh'))
@@ -218,8 +226,8 @@ class _TfliteHomeState extends State<TfliteHome> {
         leading: IconButton(
             icon: Icon(Icons.arrow_back_ios),
             onPressed: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (context) => Options()));
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => Options(uid: uid)));
             }),
       ),
       floatingActionButton: SpeedDial(
@@ -260,22 +268,24 @@ class _TfliteHomeState extends State<TfliteHome> {
             label: "Translate",
             labelStyle: TextStyle(fontSize: 18.0),
             onTap: () {
-              Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => Translator(
-                            text: objectText,
-                          )));
-            },
-          ),
-          SpeedDialChild(
-            child: Icon(Icons.change_history),
-            backgroundColor: Colors.green,
-            label: 'OCR',
-            labelStyle: TextStyle(fontSize: 18.0),
-            onTap: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (ctx) => OCR()));
+              // Navigator.push(
+              //     context,
+              //     MaterialPageRoute(
+              //         builder: (context) => Translator(
+              //             text: objectText, uid: uid, filePath: _image.path)));
+              showModalBottomSheet(
+                  context: context,
+                  builder: (context) {
+                    return SingleChildScrollView(
+                      child: Container(
+                        height: 1000,
+                        padding: EdgeInsets.symmetric(
+                            vertical: 20.0, horizontal: 60.0),
+                        child: Connection(
+                            uid: uid, text: objectText, filePath: _image.path),
+                      ),
+                    );
+                  });
             },
           ),
         ],

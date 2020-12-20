@@ -13,17 +13,25 @@ import 'dart:typed_data';
 
 import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:path_provider/path_provider.dart';
-import 'package:path/path.dart';
+
 import 'package:image_cropper/image_cropper.dart';
 import 'package:translator/translator.dart';
+import 'package:http/http.dart' as http;
+
+import 'package:dio/dio.dart';
+
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class OCR extends StatefulWidget {
+  String uid, url;
+  OCR({this.uid, this.url});
   @override
-  _OCRState createState() => _OCRState();
+  _OCRState createState() => _OCRState(uid: uid, url: url);
 }
 
 class _OCRState extends State<OCR> {
+  String uid, url;
+  _OCRState({this.uid, this.url});
   bool fordec = false;
   String outputText = "Nothing";
   String languagein = 'eng';
@@ -32,141 +40,33 @@ class _OCRState extends State<OCR> {
   String inputLanguage = "";
   String outputLanguage = "";
   Translation output;
-  final List<String> lang = ["English", "Nepali", "Hindi", "Punjabi"];
+  final List<String> lang = ["Nepali", "Hindi", "Punjabi"];
   File imPth;
-  static const String TESS_DATA_CONFIG = 'assets/tessdata_config.json';
-  static const String TESS_DATA_PATH = 'assets/tessdata';
-  static const MethodChannel _channel = const MethodChannel('tesseract_ocr');
+  bool _scanning = false;
+  var _extractText;
+  int _scanTime = 0;
 
-  language() async {
-    if (languagein == "English") {
-      if (languageout == "Hindi") {
-        setState(() {
-          inputLanguage = "en";
-          outputLanguage = "hi";
-        });
-      }
-      if (languageout == "Nepali") {
-        setState(() {
-          inputLanguage = "en";
-          outputLanguage = "ne";
-        });
-      }
-      if (languageout == "Punjabi") {
-        setState(() {
-          inputLanguage = "en";
-          outputLanguage = "pa";
-        });
-      }
-    }
-    /////////////////////////////////////////////////////////////////////
-    if (languagein == "Hindi") {
-      if (languageout == "Nepali") {
-        setState(() {
-          inputLanguage = "hi";
-          outputLanguage = "ne";
-        });
-      }
-      if (languageout == "Punjabi") {
-        setState(() {
-          inputLanguage = "hi";
-          outputLanguage = "pa";
-        });
-      }
-      if (languageout == "English") {
-        setState(() {
-          inputLanguage = "hi";
-          outputLanguage = "en";
-        });
-      }
-    }
-    ////////////////////////////////////////////////////////////
-    if (languagein == "Nepali") {
-      if (languageout == "Hindi") {
-        setState(() {
-          inputLanguage = "ne";
-          outputLanguage = "hi";
-        });
-      }
-      if (languageout == "Punjabi") {
-        setState(() {
-          inputLanguage = "ne";
-          outputLanguage = "pa";
-        });
-      }
-      if (languageout == "English") {
-        setState(() {
-          inputLanguage = "ne";
-          outputLanguage = "en";
-        });
-      }
-    }
-    ///////////////////////////////////////////////////////////////////////////
-    if (languagein == "Punjabi") {
-      if (languageout == "Hindi") {
-        setState(() {
-          inputLanguage = "pa";
-          outputLanguage = "hi";
-        });
-      }
-      if (languageout == "Nepali") {
-        setState(() {
-          inputLanguage = "pa";
-          outputLanguage = "ne";
-        });
-      }
-      if (languageout == "English") {
-        setState(() {
-          inputLanguage = "pa";
-          outputLanguage = "en";
-        });
-      }
-    }
+  void _uploadFile(filePath, lang) async {
+    // Get base file name
 
-    final translator = GoogleTranslator();
-    var translation = await translator.translate(_extractText,
-        from: inputLanguage, to: outputLanguage);
-    setState(() {
-      output = translation;
-    });
-  }
+    try {
+      FormData formData =
+          FormData.fromMap({"image": await MultipartFile.fromFile(filePath)});
 
-  static Future<String> extractText(String imagePath, String language) async {
-    assert(await File(imagePath).exists(), true);
-    final String tessData = await _loadTessData();
-    final String extractText =
-        await _channel.invokeMethod('extractText', <String, dynamic>{
-      'imagePath': imagePath,
-      'tessData': tessData,
-      'language': language,
-    });
-    return extractText;
-  }
+      Response response =
+          await Dio().post(url + "upload/ocr/" + lang, data: formData);
+      print("File upload response: $response");
 
-  static Future<String> _loadTessData() async {
-    final Directory appDirectory = await getApplicationDocumentsDirectory();
-    final String tessdataDirectory = join(appDirectory.path, 'tessdata');
+      // Show the incoming message in snakbar
 
-    if (!await Directory(tessdataDirectory).exists()) {
-      await Directory(tessdataDirectory).create();
-    }
-    await _copyTessDataToAppDocumentsDirectory(tessdataDirectory);
-    return appDirectory.path;
-  }
+      setState(() {
+        _extractText = response;
+        //_isLoading =true;
+      });
 
-  static Future _copyTessDataToAppDocumentsDirectory(
-      String tessdataDirectory) async {
-    final String config = await rootBundle.loadString(TESS_DATA_CONFIG);
-    Map<String, dynamic> files = jsonDecode(config);
-    for (var file in files["files"]) {
-      if (!await File('$tessdataDirectory/$file').exists()) {
-        final ByteData data = await rootBundle.load('$TESS_DATA_PATH/$file');
-        final Uint8List bytes = data.buffer.asUint8List(
-          data.offsetInBytes,
-          data.lengthInBytes,
-        );
-        await File('$tessdataDirectory/$file').writeAsBytes(bytes);
-      }
+      //_showSnakBarMsg(response.data['message']);
+    } catch (e) {
+      print("Exception Caught: $e");
     }
   }
 
@@ -191,10 +91,6 @@ class _OCRState extends State<OCR> {
       imPth = img;
     });
   }
-
-  bool _scanning = false;
-  String _extractText = '';
-  int _scanTime = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -228,37 +124,12 @@ class _OCRState extends State<OCR> {
             SizedBox(
               height: 25,
             ),
-            Text("Output Language"),
-            SizedBox(
-              height: 15,
-            ),
-            DropdownButtonFormField(
-                items: lang.map((ln) {
-                  return DropdownMenuItem(
-                    value: ln,
-                    child: Text('$ln'),
-                  );
-                }).toList(),
-                onChanged: (val) {
-                  setState(() {
-                    languageout = val;
-                  });
-                }),
-            SizedBox(
-              height: 15,
-            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 FlatButton.icon(
                   onPressed: () async {
                     if (fordec == false) {
-                      if (languagein == "English") {
-                        setState(() {
-                          fordec = true;
-                          selectLan = "eng";
-                        });
-                      }
                       if (languagein == "Hindi") {
                         setState(() {
                           fordec = true;
@@ -296,8 +167,7 @@ class _OCRState extends State<OCR> {
                       setState(() {});
 
                       var watch = Stopwatch()..start();
-                      _extractText =
-                          await extractText(cameraCropped.path, selectLan);
+                      _uploadFile(cameraCropped.path, selectLan);
                       _scanTime = watch.elapsedMilliseconds;
 
                       _scanning = false;
@@ -322,12 +192,6 @@ class _OCRState extends State<OCR> {
                 FlatButton.icon(
                   onPressed: () async {
                     if (fordec == false) {
-                      if (languagein == "English") {
-                        setState(() {
-                          fordec = true;
-                          selectLan = "eng";
-                        });
-                      }
                       if (languagein == "Hindi") {
                         setState(() {
                           fordec = true;
@@ -365,8 +229,7 @@ class _OCRState extends State<OCR> {
                       setState(() {});
 
                       var watch = Stopwatch()..start();
-                      _extractText =
-                          await extractText(cameraCropped.path, selectLan);
+                      _uploadFile(cameraCropped.path, selectLan);
                       _scanTime = watch.elapsedMilliseconds;
 
                       _scanning = false;
@@ -391,8 +254,10 @@ class _OCRState extends State<OCR> {
 
                 // It doesn't spin, because scanning hangs thread for now
                 _scanning
-                    ? SpinKitCircle(
-                        color: Colors.black,
+                    ? Container(
+                        child: Center(
+                          child: CircularProgressIndicator(),
+                        ),
                       )
                     : Icon(Icons.done),
               ],
@@ -409,85 +274,17 @@ class _OCRState extends State<OCR> {
             ),
             Center(
                 child: SelectableText(
-              _extractText,
+              "${_extractText}",
               style: TextStyle(color: Colors.deepOrange, fontSize: 20),
             )),
             SizedBox(
               height: 15,
             ),
-            FlatButton.icon(
-              onPressed: () {
-                language();
-              },
-              icon: Icon(
-                Icons.translate,
-                color: Colors.white,
-                size: 30,
-              ),
-              color: Colors.blueAccent,
-              label: Text(
-                "Translate",
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20,
-                    fontFamily: "RobotLight"),
-              ),
-            ),
             SizedBox(
               height: 15,
             ),
-            Text(
-              "$output",
-              style: TextStyle(color: Colors.deepOrange, fontSize: 25),
-            ),
           ],
         ),
-      ),
-      floatingActionButton: SpeedDial(
-        // both default to 16
-        marginRight: 18,
-        marginBottom: 20,
-        animatedIcon: AnimatedIcons.menu_close,
-        animatedIconTheme: IconThemeData(size: 22.0),
-        // this is ignored if animatedIcon is non null
-        // child: Icon(Icons.add),
-        visible: true,
-        // If true user is forced to close dial manually
-        // by tapping main button and overlay is not rendered.
-        closeManually: false,
-        curve: Curves.bounceIn,
-        overlayColor: Colors.black,
-        overlayOpacity: 0.5,
-        onOpen: () => print('OPENING DIAL'),
-        onClose: () => print('DIAL CLOSED'),
-        tooltip: 'Speed Dial',
-        heroTag: 'speed-dial-hero-tag',
-        backgroundColor: Colors.white,
-        foregroundColor: Colors.black,
-        elevation: 8.0,
-        shape: CircleBorder(),
-        children: [
-          SpeedDialChild(
-            child: Icon(Icons.translate),
-            backgroundColor: Colors.blue,
-            label: "Language Translate",
-            labelStyle: TextStyle(fontSize: 18.0),
-            onTap: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (ctx) => TranslatorOnly()));
-            },
-          ),
-          SpeedDialChild(
-            child: Icon(Icons.change_history),
-            backgroundColor: Colors.green,
-            label: 'Object Detection',
-            labelStyle: TextStyle(fontSize: 18.0),
-            onTap: () {
-              Navigator.push(
-                  context, MaterialPageRoute(builder: (ctx) => Options()));
-            },
-          ),
-        ],
       ),
     );
   }
