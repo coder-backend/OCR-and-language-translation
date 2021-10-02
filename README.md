@@ -18,9 +18,9 @@ You will find two app inside this drive line 1) bask.apk (To run this app, you n
 
 
 # Web Part
---> Frontend is hosted on Github
+--> Frontend, hosted on Github
 
---> Backend was hosted on a personal laptop.
+--> Backend, hosted on a personal laptop.
 
  [Frontend](https://ashish807.github.io/OCR-and-language-translation/)
 
