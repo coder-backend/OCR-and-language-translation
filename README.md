@@ -18,8 +18,9 @@ You will find two app inside this drive line 1) bask.apk (To run this app, you n
 
 
 
-# We have hosted our project on GitHub, Since we used our own laptop as a server you can only enjoy doing Object Detection, OCR, Language Translation when we are online.
-# But still you can check out how it looks by clicking [here](https://ashish807.github.io/OCR-and-language-translation/)
+We have hosted frontend of website on GitHub, but backend was hosted on a personal laptop, so you may not be able to access full functionality of project.
+
+But still you can check out how it looks by clicking [here](https://ashish807.github.io/OCR-and-language-translation/)
 
 
 
