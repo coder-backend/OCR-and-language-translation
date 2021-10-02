@@ -8,7 +8,9 @@ Presentation of the project for [Sotware Engineering](https://docs.google.com/pr
 
 Presentation of project for [Web Tech](https://docs.google.com/presentation/d/1Pv6L9VkcGXF9A1TdVO3CaWWbnXQ-X_XpH-KBaeDsN9M/edit#slide=id.g541cc04270_4_0)
 
-# Mobile App Download APK file from this [link](https://drive.google.com/drive/folders/1qvyiy0-t72qvkly3he0Jh3SYG1-AEIOc?usp=sharing)
+# Mobile App Download APK file from this [link](https://drive.google.com/drive/folders/1d9PZAcs5yNGpfD5yzUVspLmTEjvMUdcV?usp=sharing)
+
+You will find two app inside this drive line 1) bask.apk (To run this app, you need to activate firebase and need to run backend) 2) base1.apk (You just need to download and install it, all the functionality will work)
 
 # Watch full implementation [here](https://www.youtube.com/watch?v=xwLzUg2_SFk&ab_channel=TowardsAI)
 
